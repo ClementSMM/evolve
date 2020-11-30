@@ -1,0 +1,28 @@
+.btn_round {
+  background: transparent;
+  border: 0.12rem solid $dark-blue;
+  border-radius: 2rem;
+  padding: 10px 50px;
+  color: $dark-blue;
+  margin: 20px;
+  margin-right: 40px;
+    &:hover {
+      color: #222831;
+      background: white;
+    }
+}
+
+.btn_square {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding: 10px 60px;
+  color: white;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #222831;
+      background: white;
+    }
+}
