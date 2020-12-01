@@ -10,12 +10,11 @@
 }
 
 .footer_logo{
-  border-bottom-width: 3.7px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(36, 48, 70);
+  padding-bottom: 12px;
+  border-bottom: 0.2px solid #7e8a97;
   text-align: center;
   img{
-    width: 130px;
+    width: 150px;
   }
 
 }
@@ -23,10 +22,10 @@
 .socials{
   text-align: center;
   color: white;
-  padding-top: 20px;
+  padding-top: 15px;
    .fab{
-    font-size: 22px;
-    margin-right: 5px;
+    font-size: 30px;
+    margin-right: 10px;
   }
   a{
     color: white;
