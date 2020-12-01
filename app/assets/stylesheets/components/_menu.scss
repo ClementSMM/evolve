@@ -1,12 +1,53 @@
 .menu{
   background-color: $background;
   height: 100vh;
-  padding: 10px;
+  color: white;
 }
 
 #username{
+  margin-top: 16px;
+  margin-bottom: 32px;
   font-family: Montserrat;
+  font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: $blue2;
 }
+
+.level{
+  width: 100%;
+  padding: 20px 20px;
+  border-top: 4px solid $dark-blue;
+  border-bottom: 4px solid $dark-blue;
+}
+
+.purple-bar{
+  background-color: $purple !important;
+}
+
+.menu-profil{
+  margin-left: 40px;
+}
+
+.niveau{
+  margin-left: 16px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu_links{
+  margin-top: 24px;
+}
+
+.menu-link{
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 16px 0;
+  .fas,.far{
+  font-size: 40px;
+  margin-right: 10px;
+  }
+}
+
