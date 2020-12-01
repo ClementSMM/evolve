@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
