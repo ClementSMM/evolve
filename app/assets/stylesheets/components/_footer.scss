@@ -1,7 +1,7 @@
 .footer{
   height: 200px;
-  background: #222831;
-  padding: 50px;
+  background: $background;
+  padding: 20px;
     a{
       &:hover{
         color: #EAEDF2;
@@ -9,12 +9,22 @@
     }
 }
 
-.socials{
+.footer_logo{
   padding-bottom: 12px;
   border-bottom: 0.2px solid #7e8a97;
   text-align: center;
-  .fab{
-    font-size: 40px;
+  img{
+    width: 150px;
+  }
+
+}
+
+.socials{
+  text-align: center;
+  color: white;
+  padding-top: 15px;
+   .fab{
+    font-size: 30px;
     margin-right: 10px;
   }
   a{
@@ -22,10 +32,3 @@
   }
 }
 
-.mentions{
-  text-align: center;
-  color: white;
-  padding-top: 15px;
-  font-size: 15px;
-  font-weight: 300;
-}

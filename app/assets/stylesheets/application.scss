@@ -12,11 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
 a {
- color:       inherit;
+ color: inherit;
  text-decoration:  none;
  &:hover {
-  color:      inherit;
+  color: inherit;
   text-decoration: none;
  }
-}
