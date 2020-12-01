@@ -1,13 +1,13 @@
 .btn_round {
   background: transparent;
-  border: 0.12rem solid $dark-blue;
+  border: 0.12rem solid white;
   border-radius: 2rem;
   padding: 10px 50px;
-  color: $dark-blue;
+  color: white;
   margin: 20px;
   margin-right: 40px;
     &:hover {
-      color: #222831;
+      color: $background;
       background: white;
     }
 }
@@ -22,7 +22,7 @@
   text-align: center;
   text-decoration: none;
     &:hover {
-      color: #222831;
+      color: $background;
       background: white;
     }
 }
