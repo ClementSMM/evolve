@@ -1,6 +1,6 @@
 .navbar {
   background: $background;
-  height: 120px;
+  height: 150px;
   img {
     width: 180px;
     margin-left: 0px;
@@ -10,16 +10,13 @@
 .links-nav {
   justify-content: flex-end;
   a {
-   color: white;
-   text-decoration: none;
-    p {
-  font-size: 15px;
-  font-weight: 300;
-  color: white;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-top: 20px;
-    }
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0px;
+    font-size: 14px;
+    color: white;
+    margin-top: 20px;
     }
 }
 
@@ -32,7 +29,10 @@
 
 .logo {
   justify-content: flex-begin;
+}
 
+.on {
+  font-size: 18px;
 }
 
 .navbar-collapse {
