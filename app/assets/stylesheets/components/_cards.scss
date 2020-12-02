@@ -35,9 +35,131 @@
    height: 80px;
    background-color: $light-blue;
    border-radius: 20px;
+  
+  .card-size {
+    height: 64px;
+    width: 64px;
+  }
+}
 
- .card-size {
-   height: 64px;
-   width: 64px;
- }
+.card-progress {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-progress-title {
+    margin-left: 10px;
+  }
+
+  .card-progress-bar {
+    margin-top: 15px;
+  }
+}
+
+.card-progress-medal {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $background;
+
+  .medal {
+    position: absolute;
+    width: 70px;
+    top: -20px;
+    right: -25px;
+  }
+
+  .card-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-progress-title {
+    margin-left: 10px;
+  }
+
+  .card-progress-bar {
+    margin-top: 15px;
+  }
+}
+
+
+.card-start {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-start-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-start-title {
+    margin-left: 10px;
+  }
+
+  .card-start-footer {
+    margin-top: 20px;
+    color: $pink;
+  }
+}
+
+.card-locked {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-locked-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-locked-title {
+    margin-left: 10px;
+  }
+
+  .card-locked-footer {
+    margin-top: 20px;
+    color: $light-blue;
+  }
 }

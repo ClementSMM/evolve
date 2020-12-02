@@ -1,4 +1,4 @@
 class Quiz < ApplicationRecord
-  belongs_to :step
-  has_many :questions
+  belongs_to :lesson
+  has_many :questions, dependent: :destroy
 end
