@@ -18,6 +18,11 @@
    font-size: 14px;
    color: white;
    margin-top: 20px;
+   :hover {
+    border-bottom-width: 2.5px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+   }
    }
 }
 
