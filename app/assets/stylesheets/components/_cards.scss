@@ -1,7 +1,6 @@
-
 .card-category {
-   height: 288px;
-   width: 282px;
+   height: 220px;
+   min-width: 210px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -11,24 +10,32 @@
    font-size: 14px;
    font-weight: 300;
    margin-top: 20px;
+   margin-right: 60px;
    background-color: $dark-blue;
+   text-align: center;
+   padding: 18px;
+   p {
+    margin-top: 37px;
+    font-size: 15px;
+    font-weight: 400;
+   }
 }
 
 .card-icon {
-
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  top: -40px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 102px;
-  background-color: $light-blue;
-  border-radius: 20px;
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   top: -30px;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80px;
+   height: 80px;
+   background-color: $light-blue;
+   border-radius: 20px;
+  
   .card-size {
     height: 64px;
     width: 64px;

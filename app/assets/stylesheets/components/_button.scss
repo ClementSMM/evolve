@@ -7,7 +7,6 @@
    color: white;
    margin: 20px;
    margin-right: 40px;
-
    &:hover {
      color: $background;
      background: white;
@@ -33,4 +32,17 @@
    padding: 10px;
    margin-right: 20px;
    color: white;
+}
+
+.btn_big {
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 17px 60px;
+   color: white;
+   font-weight: 600;
+   &:hover {
+     color: $background;
+     background: white;
+   }
 }
