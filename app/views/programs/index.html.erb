@@ -1,3 +1,12 @@
+<h1>Programs#index</h1>
+<p>Find me in app/views/programs/index.html.erb</p>
+<% @programs_up.each do |program_up| %>
+  <p><%= program_up.first.title %></p>
+  <% if program_up.last.present? %>
+    <%= program_up.last.status %>
+  <% end %>
+<% end %>
+
 <div class="index-prog">
   <div class="index-header">
     <div class="index-header-text">
@@ -33,3 +42,4 @@
 
   </div>
 </div>
+
