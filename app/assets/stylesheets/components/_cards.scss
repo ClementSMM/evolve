@@ -97,3 +97,62 @@
     margin-top: 15px;
   }
 }
+
+
+.card-start {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-start-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-start-title {
+    margin-left: 10px;
+  }
+
+  .card-start-footer {
+    margin-top: 20px;
+    color: $pink;
+  }
+}
+
+.card-locked {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-locked-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-locked-title {
+    margin-left: 10px;
+  }
+
+  .card-locked-footer {
+    margin-top: 20px;
+    color: $light-blue;
+  }
+}
