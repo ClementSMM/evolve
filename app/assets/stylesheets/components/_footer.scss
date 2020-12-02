@@ -1,35 +1,35 @@
+
 .footer{
-  height: 200px;
-  background: $background;
-  padding: 20px;
-    a{
-      &:hover{
-        color: #EAEDF2;
-      }
-    }
+ height: 200px;
+ background: $background;
+ padding: 20px;
+   a{
+     &:hover{
+       color: #EAEDF2;
+     }
+   }
 }
 
 .footer_logo{
-  border-bottom-width: 3.7px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(36, 48, 70);
-  text-align: center;
-  img{
-    width: 130px;
-  }
-
+ border-bottom-width: 3.7px;
+ border-bottom-style: solid;
+ border-bottom-color: rgb(36, 48, 70);
+ text-align: center;
+   img{
+     width: 130px;
+   }
 }
 
 .socials{
-  text-align: center;
-  color: white;
-  padding-top: 20px;
-   .fab{
-    font-size: 22px;
-    margin-right: 5px;
-  }
-  a{
-    color: white;
-  }
-}
+ text-align: center;
+ color: white;
+ padding-top: 20px;
 
+  .fab{
+   font-size: 22px;
+   margin-right: 5px;
+ }
+  a{
+   color: white;
+ }
+}

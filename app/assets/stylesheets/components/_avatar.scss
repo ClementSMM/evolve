@@ -1,22 +1,25 @@
+
 .avatar-small{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 4px solid $light-blue;
-  object-fit: cover;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   border: 4px solid $light-blue;
+   object-fit: cover;
 }
+
+
 .avatar-large {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 5px solid $light-blue;
-  object-fit: cover;
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   border: 5px solid $light-blue;
+   object-fit: cover;
 }
 
 .avatar-square {
-  width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
-  object-fit: cover;
+   width: 40px;
+   border-radius: 0px;
+   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+   border: white 1px solid;
+   object-fit: cover;
 }
