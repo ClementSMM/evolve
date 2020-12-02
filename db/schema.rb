@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_30_163234) do
+ActiveRecord::Schema.define(version: 2020_12_02_111023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_163234) do
   create_table "programs", force: :cascade do |t|
     t.text "description"
     t.string "title"
+    t.integer "unlock_program"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,12 +57,12 @@ ActiveRecord::Schema.define(version: 2020_11_30_163234) do
   end
 
   create_table "quizzes", force: :cascade do |t|
-    t.bigint "step_id", null: false
+    t.bigint "lesson_id", null: false
     t.integer "user_grade"
     t.integer "number_correct_aswers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["step_id"], name: "index_quizzes_on_step_id"
+    t.index ["lesson_id"], name: "index_quizzes_on_lesson_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -93,8 +94,15 @@ ActiveRecord::Schema.define(version: 2020_11_30_163234) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.integer "level"
+    t.integer "xp"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -115,7 +123,7 @@ ActiveRecord::Schema.define(version: 2020_11_30_163234) do
   add_foreign_key "final_tests", "programs"
   add_foreign_key "lessons", "programs"
   add_foreign_key "questions", "quizzes"
-  add_foreign_key "quizzes", "steps"
+  add_foreign_key "quizzes", "lessons"
   add_foreign_key "reviews", "programs"
   add_foreign_key "reviews", "users"
   add_foreign_key "steps", "lessons"
