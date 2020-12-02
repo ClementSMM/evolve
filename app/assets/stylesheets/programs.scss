@@ -1,0 +1,44 @@
+/* page index */
+
+.index-prog {
+
+  .index-header {
+    position: relative;
+    width: 90%;
+    height: 204px;
+    margin-top: 75px;
+    margin: 7% auto;
+    background-color: $background;
+    border-radius: 20px;
+
+    .index-header-text {
+      width: 60%;
+      color: white;
+      margin-left: 5%;
+      padding-top: 5%;
+      font-weight: 800;
+      line-height: 29px;
+      font-size: 24px;
+
+    }
+
+    .rocket-position {
+      position: absolute;
+      width: 240px;
+      right: 25px;
+      top: -15px;
+    }
+  }
+
+  .index-card {
+      width: 90%;
+      margin: 7% auto;
+    }
+}
+
+.index-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 30px;
+}
