@@ -12,10 +12,19 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar' %>
+    <% unless current_page?(root_path) || current_page?('/users/sign_in') || current_page?('/users/sign_up')%>
+      <div class="grid">
+        <%= render "shared/menu" %>
+        <div class="body-content">
+          <%= yield %>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
 
-    <%= yield %>
     <%= render 'shared/footer' %>
   </body>
 </html>
