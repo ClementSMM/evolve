@@ -15,19 +15,53 @@
 }
 
 .card-icon {
-   display: flex;
-   position: absolute;
-   justify-content: center;
-   align-items: center;
-   top: -40px;
-   left: 0;
-   right: 0;
-   margin-left: auto;
-   margin-right: auto;
-   width: 100px;
-   height: 102px;
-   background-color: $light-blue;
-   border-radius: 20px;
+
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 102px;
+  background-color: $light-blue;
+  border-radius: 20px;
+  .card-size {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+.card-progress {
+  height: 142px;
+  width: 285px;
+  color: white;
+  border-radius: 20px;
+  position:relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $dark-blue;
+
+  .card-progress-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .card-progress-title {
+    margin-left: 10px;
+  }
+
+  .card-progress-bar {
+    margin-top: 15px;
+  }
+}
 
  .card-size {
    height: 64px;
