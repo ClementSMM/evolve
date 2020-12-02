@@ -1,12 +1,104 @@
+
 .menu{
-  background-color: $background;
-  height: 100vh;
-  padding: 10px;
+ background-color: $background;
+ height: 100vh;
+ color: white;
+ padding-top: 30px;
 }
 
 #username{
-  font-family: Montserrat;
-  font-size: 18px;
-  line-height: 22px;
-  color: $blue2;
+ margin-top: 10px;
+ margin-bottom: 20px;
+ font-family: Montserrat;
+ font-weight: 300;
+ font-size: 16px;
+ line-height: 22px;
+ color: $blue2;
 }
+
+.level{
+ width: 100%;
+ padding: 20px 20px;
+ border-top: 3.7px solid $dark-blue;
+ border-bottom: 3.7px solid $dark-blue;
+}
+
+.purple-bar{
+ background-color: $purple !important;
+}
+
+.menu-profil{
+ margin-left: 40px;
+}
+
+.niveau{
+ margin-left: 16px;
+ font-family: Montserrat;
+ font-weight: 700;
+ font-size: 13px;
+}
+
+.menu_links{
+ margin-top: 24px;
+}
+
+.menu-link1{
+ font-family: Montserrat;
+ font-weight: 400;
+ font-size: 13px;
+ margin: 11px 0;
+ .fas,.far{
+ font-size: 33px;
+ margin-right: 18px;
+ }
+}
+
+.menu-link2{
+ font-family: Montserrat;
+ font-weight: 400;
+ font-size: 13px;
+ margin: 11px 0;
+ .fas,.far{
+ font-size: 36px;
+ margin-right: 20px;
+ }
+}
+
+.menu-link3{
+ font-family: Montserrat;
+ font-weight: 400;
+ font-size: 13px;
+ margin: 11px 0;
+ .fas,.far{
+ font-size: 35px;
+ margin-right: 21px;
+ }
+}
+
+.menu-link4{
+ font-family: Montserrat;
+ font-weight: 400;
+ font-size: 13px;
+ margin: 11px 0;
+ .fas,.far{
+ font-size: 31px;
+ margin-right: 20px;
+ }
+}
+
+.menu-link5{
+ font-family: Montserrat;
+ font-weight: 400;
+ font-size: 13px;
+ margin: 11px 0;
+ .fas,.far{
+ font-size: 34px;
+ margin-right: 18px;
+ }
+}
+
+.xp-font{
+ font-size: 14px;
+ font-weight: 600;
+}
+
