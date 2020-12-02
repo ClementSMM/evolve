@@ -1,34 +1,35 @@
+
 .btn_round {
-  background: transparent;
-  border: 0.12rem solid white;
-  border-radius: 2rem;
-  padding: 10px 50px;
-  color: white;
-  margin: 20px;
-  margin-right: 40px;
-    &:hover {
-      color: $background;
-      background: white;
-    }
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 10px 50px;
+   color: white;
+   margin: 20px;
+   margin-right: 40px;
+
+   &:hover {
+     color: $background;
+     background: white;
+   }
 }
 
 .btn_square {
-  background: transparent;
-  border: 0.12rem solid white;
-  border-radius: 1rem;
-  padding: 10px 60px;
-  color: white;
-  margin: 20px;
-  text-align: center;
-  text-decoration: none;
-    &:hover {
-      color: $background;
-      background: white;
-    }
-}
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 1rem;
+   padding: 10px 60px;
+   color: white;
+   margin: 20px;
+   text-align: center;
+   text-decoration: none;
+   &:hover {
+     color: $background;
+     background: white;
+   }
 
 .btn_connexion{
-  padding: 10px;
-  margin-right: 20px;
-  color: white;
+   padding: 10px;
+   margin-right: 20px;
+   color: white;
 }
