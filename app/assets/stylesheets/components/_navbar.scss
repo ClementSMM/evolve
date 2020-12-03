@@ -2,6 +2,7 @@
 .navbar {
  background: $background;
  height: 150px;
+ position: relative;
  img {
    width: 180px;
    margin-left: 0px;
@@ -48,3 +49,10 @@
  flex-grow: 0;
 }
 
+.bg-navbar {
+  height: 120px;
+  position: absolute;
+  left: 400px;
+  top: 0px;
+  margin-top: 20px;
+}
