@@ -1,0 +1,13 @@
+<%= link_to program_path(program) do %>
+  <div class="card-start">
+    <div class="card-start-header">
+      <%= image_tag "messenger.png", alt: "alttext", class: "icon-position"%>
+      <div class="card-start-title">
+        <p><%= program.title %></p>
+      </div>
+    </div>
+    <div class="card-start-footer ">
+      <p>Commencer</p>
+    </div>
+  </div>
+<% end %>

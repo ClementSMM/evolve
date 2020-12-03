@@ -11,7 +11,7 @@ User.destroy_all
 Program.destroy_all
 
 User.create!(email: "marg@email.com", password: "azerty", level: 1, xp: 10, username: "Marg")
-User.create!(email: "momo@email.com", password: "azerty", level: 2, xp: 50, username: "Momo")
+User.create!(email: "momo@email.com", password: "azerty", level: 3, xp: 50, username: "Momo")
 User.create!(email: "clem@email.com", password: "azerty", level: 5, xp: 20, username: "Clem")
 
 marg = User.find_by_email("marg@email.com")
@@ -27,7 +27,7 @@ prog5 = Program.create!(title: "Marketing Digital", description: "Aujourd'hui il
 prog6 = Program.create!(title: "Faire son site avec WordPress", description: "Vous pouvez réaliser vous même un site web de manière assez simple grace à Wordpress", unlock_program: 3)
 prog7 = Program.create!(title: "Gérer son temps", description: "Vous ne savez pas par où commencer, vous vous perdez souvent dans des détails et y consacrez trop de temps. Apprenez à gérer au mieux votre temps pour optimiser votre projet.", unlock_program: 3)
 prog8 = Program.create!(title: "Comptabilité", description: "Il est important d'avoir quelques connaissances sur la comptabilité des entreprises afin d'apprendre à bien utiliser vos moyens financiers", unlock_program: 4)
-prog9 = Program.create!(title: "Pitch - entrainement à la communication orale", description: "Il est important d'être capable de présenter votre projet. Apprenez les tecniques de pitch et entrainez vous à développer vos idées.", unlock_program: 5)
+prog9 = Program.create!(title: "Pitch - communication orale", description: "Il est important d'être capable de présenter votre projet. Apprenez les tecniques de pitch et entrainez vous à développer vos idées.", unlock_program: 5)
 prog10 = Program.create!(title: "Maitriser Instagram", description: "Devenez un expert de l'utilisation d'instagram à des fins professionnels et boostez votre campagne Marketing.", unlock_program: 5)
 
 users.each do |user|
