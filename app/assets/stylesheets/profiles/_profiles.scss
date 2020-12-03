@@ -1,0 +1,129 @@
+/* page dashboard */
+
+.dashboard {
+
+  .dashboard-header {
+    position: relative;
+    width: 90%;
+    height: 230px;
+    margin: 150px auto;
+    background-color: #1A2333;
+    border-radius: 20px;
+
+    .dashboard-header-text {
+      width: 70%;
+      color: white;
+      margin-left: 5%;
+      padding-top: 60px;
+      font-weight: normal;
+      line-height: 22px;
+      font-size: 18px;
+      p{
+        margin: 5px 0;
+      }
+      h3{
+        margin-bottom: 20px;
+      }
+
+    }
+
+    .img-position {
+      position: absolute;
+      width: 418px;
+      right: -70px;
+      top: -70px;
+    }
+  }
+
+  .dashboard-card {
+      width: 90%;
+      margin: 7% auto;
+        h3{
+        color: white;
+        width: 200px;
+        height: 65px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  .dashboard-stats{
+    width: 90%;
+    height: 382px;
+    margin: 50px auto;
+    padding: 4%;
+    background-color: #1A2333;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    color: white;
+    .completion{
+      h3{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        width: 60%
+      }
+    }
+  }
+  .dashbox{
+    width: 160px;
+    height: 125px;
+    border: 2px solid #243046;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    p{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+    #nb-messages, #nb-lesson-progress{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+    }
+  }
+  .jour-co{
+    height: 290px;
+    width: 90%;
+    border: 2px solid #243046;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    p{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+    #jours-etudies{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 61px;
+      color: $pink;
+    }
+  }
+}
+
+.dashboard-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 30px;
+}
