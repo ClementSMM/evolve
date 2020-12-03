@@ -4,7 +4,7 @@ class ProgramsController < ApplicationController
   def index
     programs = Program.all
     @ups = UsersProgram.where(user: current_user)
-    pre_index(programs, @ups)
+    @result = pre_index(programs, @ups)
   end
 
   def show
@@ -17,7 +17,7 @@ class ProgramsController < ApplicationController
     @programs_up = []
     programs.each do |program|
       if program.users.include?(current_user)
-        usersprogram = ups.find { |up| up.program_id = program.id }
+        usersprogram = ups.find { |up| up.program_id == program.id }
        @programs_up << [program, usersprogram]
       else
         @programs_up << [program, nil]
