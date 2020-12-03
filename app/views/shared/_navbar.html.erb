@@ -6,16 +6,16 @@
   </div>
 
   <% if user_signed_in? %>
-    <div class="links-nav sign-in">
+    <div class="links-nav">
     <%= link_to destroy_user_session_path, method: :delete do %>
-    <span class="btn_connexion"><i class="fas fa-power-off mr-2"></i>Déconnexion</span>
+    <span class="btn_connexion sign-in"><i class="fas fa-power-off mr-2"></i>Déconnexion</span>
     <% end %>
     </div>
 
   <% else %>
-    <div class="links-nav sign-in">
+    <div class="links-nav">
     <%= link_to new_user_session_path do %>
-    <span class="btn_connexion"><i class="fas fa-power-off mr-2"></i>Je me connecte</span>
+    <span class="btn_connexion sign-in"><i class="fas fa-power-off mr-2"></i>Je me connecte</span>
     <% end %>
     <%= link_to "Je m'inscris", new_user_registration_path, class: "btn_round" %>
     </div>
