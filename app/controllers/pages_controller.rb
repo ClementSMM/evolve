@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     if current_user
-      redirect_to dashboard_profiles_path
+      redirect_to profiles_dashboard_path
     end
   end
 end
