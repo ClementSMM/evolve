@@ -10,9 +10,9 @@ UsersProgram.destroy_all
 User.destroy_all
 Program.destroy_all
 
-User.create!(email: "marg@email.com", password: "azerty", level: 1, xp: 10)
-User.create!(email: "momo@email.com", password: "azerty", level: 2, xp: 50)
-User.create!(email: "clem@email.com", password: "azerty", level: 5, xp: 20)
+User.create!(email: "marg@email.com", password: "azerty", level: 1, xp: 10, username: "Marg")
+User.create!(email: "momo@email.com", password: "azerty", level: 2, xp: 50, username: "Momo")
+User.create!(email: "clem@email.com", password: "azerty", level: 5, xp: 20, username: "Clem")
 
 marg = User.find_by_email("marg@email.com")
 momo = User.find_by_email("momo@email.com")
