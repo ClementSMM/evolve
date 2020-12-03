@@ -35,7 +35,7 @@
    height: 80px;
    background-color: $light-blue;
    border-radius: 20px;
-  
+
   .card-size {
     height: 64px;
     width: 64px;
@@ -163,3 +163,82 @@
     color: $light-blue;
   }
 }
+
+.card-lesson {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $background;
+
+  .medal-lesson {
+    position: absolute;
+    width: 70px;
+    top: -20px;
+    right: -25px;
+  }
+}
+
+.card-lesson-wip {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $light-blue;
+
+  .pin-lesson {
+    position: absolute;
+    width: 70px;
+    top: -20px;
+    right: -25px;
+  }
+}
+
+.card-lesson-locked {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $blue-grey;
+
+  .picto-locked {
+    position: absolute;
+    width: 45px;
+    top: 10px;
+    right: 7px;
+  }
+}
+
+.card-review {
+  height: 110px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: $background;
+
+  .stars {
+    position: absolute;
+    width: 20px;
+    top: -10px;
+    left: 45px;
+  }
+}
+
