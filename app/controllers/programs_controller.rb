@@ -4,7 +4,7 @@ class ProgramsController < ApplicationController
   def index
     programs = Program.all
     @ups = UsersProgram.where(user: current_user)
-    @result = pre_index(programs, @ups)
+    pre_index(programs, @ups)
   end
 
   def show
