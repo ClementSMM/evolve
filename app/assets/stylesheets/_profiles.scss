@@ -51,16 +51,79 @@
     }
   .dashboard-stats{
     width: 90%;
-    height: 500px;
+    height: 382px;
     margin: 50px auto;
+    padding: 4%;
     background-color: #1A2333;
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    color: white;
+    .completion{
+      h3{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        width: 60%
+      }
+    }
+  }
+  .dashbox{
+    width: 160px;
+    height: 125px;
+    border: 2px solid #243046;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    p{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+    #nb-messages, #nb-lesson-progress{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 37px;
+      text-align: center;
+    }
+  }
+  .jour-co{
+    height: 290px;
+    width: 90%;
+    border: 2px solid #243046;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    p{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+    #jours-etudies{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 50px;
+      line-height: 61px;
+      color: $pink;
+    }
   }
 }
 
 .dashboard-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 35px;
   grid-row-gap: 30px;
 }

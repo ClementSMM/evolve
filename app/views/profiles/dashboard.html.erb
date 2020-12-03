@@ -35,6 +35,50 @@
     </div>
   </div>
   <div class="dashboard-stats">
-
+    <div class="completion d-flex flex-column align-items-center">
+      <h3>Complétion générale</h3>
+      <%= image_tag "capture-chart.png", alt: "alttext" %>
+    </div>
+    <div class="d-flex flex-column justify-content-between">
+      <div class="dashbox">
+        <p>Leçons en cours</p>
+        <p id="nb-lesson-progress">3</p>
+      </div>
+      <div class="dashbox">
+        <p>Messages envoyés</p>
+        <p id="nb-messages">10</p>
+      </div>
+    </div>
+    <div class="jour-co d-flex flex-column justify-content-between">
+      <p>Vous avez étudié</p>
+      <p id="jours-etudies"><span id="nb-jours-etudies">5</span> jours</p>
+      <p>d'affilé. Bravo!</p>
+    </div>
+  </div>
+  <div class="dashboard-card">
+    <h3>Programmes recommandés</h3>
+    <div class="dashboard-grid">
+      <!-- class index-grid is in programs.scss -->
+      <% 3.times do%>
+        <div class="card-progress">
+          <div class="card-progress-header">
+            <%= image_tag "messenger.png", alt: "alttext", class: "icon-position"%>
+            <div class="card-progress-title">
+              hello there. General Kenobi!
+            </div>
+          </div>
+          <div class="card-progress-bar">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+              <div class="d-block  w-100">
+                <div class="progress" style="height: 10px">
+                  <div class="progress-bar purple-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+                </div>
+              </div>
+              <div class="d-flex ml-1" style="font-size: 20px; white-space: nowrap;"><span>20%</span></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
