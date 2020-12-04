@@ -36,17 +36,19 @@
     }
 }
 
-.index-grid{
+.index-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 35px;
   grid-row-gap: 30px;
 }
 
-.yellow-bar{
+.yellow-bar {
  background-color: #F8B64C !important;
 }
 
-.dark-bar{
- background-color: $dark-blue !important;
+.dark-bar {
+ background-color: #243046 !important;
 }
+
+
