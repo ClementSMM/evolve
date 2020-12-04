@@ -1,2 +1,4 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<h2><%= @user.username %></h2>
+<%= @user.email %>
+<%= @user.level %>
+<%= link_to "Edit Profile", edit_user_registration_path  %>
