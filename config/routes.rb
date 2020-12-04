@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :programs, only: [:index, :show]
+  resources :steps, only: [:show]
   resources :profiles do
     collection do
       get :profile

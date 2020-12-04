@@ -14,6 +14,20 @@
    }
 }
 
+.btn_round2 {
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 10px 50px;
+   color: white;
+   width: 155px;
+
+   &:hover {
+     color: $background;
+     background: white;
+   }
+}
+
 .btn_square {
    background: transparent;
    border: 0.13rem solid white;
