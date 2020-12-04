@@ -1,4 +1,4 @@
-<div class="container-form">
+  <div class="container-form">
   <h2>Modifier mon profil</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -12,16 +12,16 @@
       <% end %>
 
       <%= f.input :password,
-                  hint: "leave it blank if you don't want to change it",
+                  hint: "Laissez ce champ vide si vous ne souhaitez pas modifier",
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "Nouveau mot de passe" } %>
       <%= f.input :password_confirmation,
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "Nouveau mot de passe" } %>
       <%= f.input :current_password,
-                  hint: "we need your current password to confirm your changes",
+                  hint: "Nous avons besoin de votre mot de passe actuel pour valider",
                   required: true,
-                  input_html: { autocomplete: "current-password" } %>
+                  input_html: { autocomplete: "Mot de passe actuel" } %>
       <%= f.input :first_name %>
       <%= f.input :last_name%>
       <%= f.input :username %>
@@ -29,13 +29,13 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Update", class: "btn_square" %>
+      <%= f.button :submit, "Mettre à jour", class: "btn_square" %>
     </div>
   <% end %>
+<br>
+  <h2>Vous souhaitez nous quitter ?</h2>
 
-  <h3>Cancel my account</h3>
+  <p><%= link_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p><br><br>
 
-  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-  <%= link_to "Back", :back, class: "btn_round m-4" %>
+  <%= link_to "Retour", :back, class: "btn_round mb-30" %>
 </div>
