@@ -80,3 +80,11 @@ up = UsersProgram.new(status: "done")
 up.user = clem
 up.program = prog8
 up.save
+
+lesson1 = Lesson.new(title: "Qu'est-ce que le Marketing digital?")
+lesson1.program = prog5
+lesson1.save
+
+step1 = Step.new(title: "Définition")
+step1.lesson = lesson1
+step1.save
