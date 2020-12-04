@@ -12,5 +12,6 @@ class Lesson < ApplicationRecord
     else
       @step = Step.find(up.last_step_id)
     end
+    return @step
   end
 end
