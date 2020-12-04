@@ -83,27 +83,30 @@ up.program = prog8
 up.save
 
 lesson1 = Lesson.new(title: "À bout de forces", description: "Savoir faire la différence entre le stress ou le surmenage et le burnout.", number: 1)
-lesson1.program = prog5
+lesson1.program = prog11
 lesson1.save
 
 lesson2 = Lesson.new(title: "Les facteurs de risque", description: "Reconnaître les facteurs de risque de burnout" , number: 2)
-lesson2.program = prog5
+lesson2.program = prog11
 lesson2.save
 
 lesson3 = Lesson.new(title: "Lutter contre le stress", description: "Définir ses priorités. Apprendre les méthodes de relaxation adaptées", number: 3)
-lesson3.program = prog5
+lesson3.program = prog11
 lesson3.save
 
 lesson4 = Lesson.new(title: "Le burnout ne passera pas", description: "Découvrir quels facteurs liés au travail favorisent le burnout", number: 4)
-lesson4.program = prog5
+lesson4.program = prog11
 lesson4.save
 
 lesson5 = Lesson.new(title: "La vie après le burnout", description: "Apprendre à faire désormais les choses différemment", number: 5)
-lesson5.program = prog5
+lesson5.program = prog11
 lesson5.save
 
+#step1 = Step.new(number:1)
+#step1.lesson = lesson1
+#step1.save
 
-step1 = Step.new(title: "Définir le stress", number: 1, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
+step2 = Step.new(title: "Définir le stress", number: 2, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
 
 Le stress a été découvert par un physiologiste anglosaxon, Henry Seyle.
 
@@ -119,8 +122,8 @@ Le stress correspond aussi aux composantes de l’agression qui va enclencher ce
 
 Le mot stress est une manière de décrire toute situation que nous considérons comme dangereuse pour notre équilibre personnel, difficile à éviter voire insupportable. \n\n -Le Figaro")
 
-step1.lesson = lesson1
-step1.save
+step2.lesson = lesson1
+step2.save
 
 up2 = UsersProgram.new(status: "in progress")
 up2.user = momo
@@ -128,5 +131,5 @@ up2.program = prog11
 up2.save
 
 up2.last_lesson_id = lesson3.id
-up2.last_step_id = step1.id
+up2.last_step_id = step2.id
 up2.save

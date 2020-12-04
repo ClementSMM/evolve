@@ -9,6 +9,7 @@ class ProgramsController < ApplicationController
 
   def show
     @program = Program.find(params[:id])
+    #@lessons = @program.lessons
   end
 
   private

@@ -38,11 +38,13 @@
         <h4>À bout de forces</h4>
         <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
       </div>
+      <%= link_to step_path(Step.first)  do %>
       <div class="card-lesson-wip">
         <%= image_tag "medal-wip.png", alt: "alttext", class: "pin-lesson"%>
         <h4>À bout de forces</h4>
         <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
       </div>
+      <% end %>
       <div class="card-lesson-locked">
         <%= image_tag "lock.png", alt: "alttext", class: "picto-locked"%>
         <h4>À bout de forces</h4>
