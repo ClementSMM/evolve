@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :programs, only: [:index, :show]
 
+  resources :steps, only: [:show]
   get "/profiles/dashboard", to:"profiles#dashboard"
   get "/profiles/profile", to:"profiles#profile"
 
