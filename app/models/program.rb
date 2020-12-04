@@ -4,4 +4,5 @@ class Program < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :users_programs, dependent: :destroy
   has_many :users, through: :users_programs
+  has_many :steps, through: :lessons
 end
