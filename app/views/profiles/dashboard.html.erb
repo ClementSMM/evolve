@@ -1,10 +1,8 @@
 <div class="dashboard">
   <div class="dashboard-header">
     <div class="dashboard-header-text">
-      <h3>Hello, <%= current_user.username %>!</h3>
-      <p>Content de te revoir chez nous.</p>
-      <p>Consulte tes statistiques, et si le coeur t’en dit... Lance toi dans tes prochaines leçons !</p>
-      <p>La communauté est à ta disposition si tu as des questions.</p>
+      <h3>Hello, <span class="light-font"><%= current_user.username %> !</span></h3>
+      <p>Content de te revoir chez nous.<br>Consulte tes statistiques, et si le coeur t’en dit...<br>Lance toi dans tes prochaines leçons !<br>La communauté est à ta disposition si tu as des questions.</p>
     </div>
     <%= image_tag "boy_dashboard 1.png", alt: "alttext", class: "img-position" %>
   </div>
@@ -17,14 +15,14 @@
       <% end %>
     </div>
   </div>
-  <div class="dashboard-stats">
+  <div class="dashboard-stats appear">
     <div class="completion d-flex flex-column align-items-center">
       <h3>Complétion générale</h3>
       <%= image_tag "capture-chart.png", alt: "alttext" %>
     </div>
-    <div class="d-flex flex-column justify-content-between">
+    <div class="d-flex flex-column justify-content-center">
       <div class="dashbox">
-        <p>Leçons en cours</p>
+        <p>Leçons<br>en cours</p>
         <p id="nb-lesson-progress">3</p>
       </div>
       <div class="dashbox">
@@ -32,13 +30,13 @@
         <p id="nb-messages">10</p>
       </div>
     </div>
-    <div class="jour-co d-flex flex-column justify-content-between">
+    <div class="jour-co d-flex flex-column justify-content-center">
       <p>Vous avez étudié</p>
       <p id="jours-etudies"><span id="nb-jours-etudies">5</span> jours</p>
       <p>d'affilé. Bravo!</p>
     </div>
   </div>
-  <div class="dashboard-card">
+  <div class="dashboard-card appear">
     <h3>Programmes recommandés</h3>
     <div class="dashboard-grid">
       <!-- class index-grid is in programs.scss -->

@@ -6,17 +6,17 @@
     height: 204px;
     margin-top: 75px;
     margin: 7% auto;
-    background-color: $blue2;
+    background-color: #1A2333;
     border-radius: 20px;
 
     .index-header-text {
       width: 60%;
       color: white;
       margin-left: 5%;
-      padding-top: 5%;
-      font-weight: 800;
+      padding-top: 6%;
+      font-weight: 300;
       line-height: 29px;
-      font-size: 24px;
+      font-size: 23px;
 
     }
 
@@ -48,4 +48,8 @@
 
 .dark-bar {
  background-color: #243046 !important;
+}
+
+.font-height-header {
+  font-weight: 900;
 }

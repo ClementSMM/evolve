@@ -1,4 +1,13 @@
-<h2><%= @user.username %></h2>
-<%= @user.email %>
-<%= @user.level %>
-<%= link_to "Edit Profile", edit_user_registration_path  %>
+<div class="profil-edit">
+  <h2>Salut <%= @user.username %> !</h2>
+  <h3>Pour rappel, tu nous a communiqué<br>les éléments suivants lors de ton inscription :</h3>
+  <p><strong>Email : </strong><%= @user.email %></p>
+  <p><strong>Prénom : </strong><%= @user.first_name %></p>
+  <p><strong>Nom : </strong><%= @user.last_name %></p>
+  <p><strong>Avatar</strong></p><% if current_user.photo.attached? %>
+     <%= cl_image_tag current_user.photo.key, height: 150, width: 150, gravity: "face", crop: :fill, class: "avatar-large" %>
+    <% else %>
+      <%= image_tag("avatar.png", class:"avatar-large")%>
+    <% end %><br><br><br>
+  <%= link_to "Mettre à jour", edit_user_registration_path, class: "btn_round-profile" %>
+</div>
