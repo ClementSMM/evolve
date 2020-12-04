@@ -1,8 +1,12 @@
 <div class="menu d-flex flex-column">
 <%= image_tag "bg-menu.png", class: 'bg-menu' %>
   <div class="d-flex align-self-start flex-column menu-profil">
-    <%= image_tag("profil.jpg", class:"avatar-large")%>
-    <span id="username"><%= current_user.username%> </span>
+    <% if current_user.photo.attached? %>
+     <%= cl_image_tag current_user.photo.key, height: 150, width: 150, gravity: "face", crop: :fill, class: "avatar-large" %>
+    <% else %>
+      <%= image_tag("avatar.png", class:"avatar-large")%>
+    <% end %>
+    <span id="username"><%= current_user.username.upcase%> </span>
   </div>
   <div class="level d-flex flex-column">
     <p class="niveau align-self-start">Niveau <span id="niveau"><%= current_user.level %> </span></p>
@@ -20,7 +24,7 @@
     <%= link_to profiles_dashboard_path, class:"menu-link1 d-flex align-items-center" do %>
       <i class="fas fa-tachometer-alt"></i>Dashboard
     <% end %>
-    <%= link_to "#", class:"menu-link2 d-flex align-items-center" do %>
+    <%= link_to profiles_profile_path, class:"menu-link2 d-flex align-items-center" do %>
       <i class="far fa-user-circle"></i>Mon profil
     <% end %>
     <%= link_to programs_path, class:"menu-link3 d-flex align-items-center" do %>
