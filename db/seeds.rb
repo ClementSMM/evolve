@@ -123,9 +123,9 @@ step1.lesson = lesson1
 step1.save
 
 up2 = UsersProgram.new(status: "in progress")
-up.user = momo
-up.program = prog11
-up.save
+up2.user = momo
+up2.program = prog11
+up2.save
 
 up2.last_lesson_id = lesson3.id
 up2.last_step_id = step1.id
