@@ -2,6 +2,7 @@
 .navbar {
  background: $background;
  height: 150px;
+ position: relative;
  img {
    width: 180px;
    margin-left: 0px;
@@ -10,22 +11,30 @@
 
 .links-nav {
  justify-content: flex-end;
- a {
    color: white;
    text-decoration: none;
    font-weight: 600;
    margin-left: 0px;
    font-size: 14px;
-   color: white;
-   margin-top: 20px;
-   }
 }
 
+
 .sign-in {
- :hover {
-   color: white;
-   text-decoration: none;
- }
+  display: inline-block;
+}
+
+.sign-in:after {
+ content: "";
+ display: block;
+ height: 0.2em;
+ width: 0%;
+ margin-bottom: 9px;
+ background-color: white;
+ transition: width 0.4s;
+}
+
+.sign-in:hover:after {
+ width: 100%;
 }
 
 .logo {
@@ -40,3 +49,10 @@
  flex-grow: 0;
 }
 
+.bg-navbar {
+  height: 120px;
+  position: absolute;
+  left: 400px;
+  top: 0px;
+  margin-top: 20px;
+}

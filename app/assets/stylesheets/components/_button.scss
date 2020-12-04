@@ -7,10 +7,10 @@
    color: white;
    margin: 20px;
    margin-right: 40px;
-
    &:hover {
      color: $background;
      background: white;
+     transition: 0.5s;
    }
 }
 
@@ -34,12 +34,15 @@
    border-radius: 1rem;
    padding: 10px 60px;
    color: white;
-   margin: 20px;
    text-align: center;
    text-decoration: none;
+   margin-top: 15px;
+   margin-bottom: 20px;
+
    &:hover {
      color: $background;
      background: white;
+     transition: 0.5s;
    }
  }
 
@@ -47,4 +50,34 @@
    padding: 10px;
    margin-right: 20px;
    color: white;
+}
+
+.btn_big {
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 17px 60px;
+   color: white;
+   font-weight: 600;
+   &:hover {
+     color: $background;
+     background: white;
+     transition: 0.5s;
+   }
+}
+
+
+.btn_round-lessons {
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 10px 40px;
+   margin-right: 80px;
+   color: white;
+   margin-bottom: 50px;
+   &:hover {
+     color: $background;
+     background: white;
+     transition: 0.5s;
+   }
 }

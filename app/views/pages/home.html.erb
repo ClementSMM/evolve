@@ -1,2 +1,40 @@
-<h1>HOME PAGE</h1>
+  <%= image_tag "bg_home.png", class: 'bg-home' %>
+  <%= image_tag "ellipse-blue.png", class: 'ellipse-blue' %>
+  <%= image_tag "ellipse-pink.png", class: 'ellipse-pink' %>
+  <%= image_tag "ellipse-purple.png", class: 'ellipse-purple' %>
+  <%= image_tag "boy_home.png", class: 'boy-home' %>
 
+  <div class="header">
+    <h1>Offrez-vous toutes les chances de réussir.</h1>
+    <h2>1er programme de e-learning dédié aux entrepreneurs en phase de création.</h2>
+    <%= link_to "Je me lance !", new_user_registration_path, class: "btn_big" %>
+  </div>
+
+  <div class="title-arguments appear">
+    <h3>Connecté avec notre communauté, vous apprendrez tout en vous amusant.</h3>
+  </div>
+
+  <div class="arguments appear">
+    <div class="card-category">
+      <p>Des contenus courts conçus par des experts de l’entrepreneuriat.</p>
+        <div class="card-icon">
+          <%= image_tag "graduation-cap.png", class: 'picto' %>
+        </div>
+    </div>
+      <div class="card-category">
+        <p>Une communauté active d’entrepreneurs prêts à vous aider.</p>
+          <div class="card-icon">
+            <%= image_tag "group-chat-1.png", class: 'picto' %>
+        </div>
+      </div>
+    <div class="card-category">
+      <p>Un système de gamification vous permettant d’acquérir des contenus exclusifs.</p>
+        <div class="card-icon">
+          <%= image_tag "medal-1.png", class: 'picto' %>
+        </div>
+    </div>
+  </div>
+
+  <div class="center appear">
+  <%= link_to "Je me lance !", new_user_registration_path, class: "btn_round" %>
+  </div>

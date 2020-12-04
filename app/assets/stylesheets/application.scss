@@ -13,6 +13,8 @@
 @import "pages/index";
 @import "controllers/programs";
 @import "controllers/steps";
+@import "pages/show_program";
+@import "profiles/profiles";
 
 body{
   background-color: $background;
@@ -35,4 +37,10 @@ a {
 .body-content{
   background-color: $dark-blue;
   border-radius: 50px 0px 0px 50px;
+}
+
+.appear{
+  opacity:0;
+  position: relative;
+  top: 100px;
 }

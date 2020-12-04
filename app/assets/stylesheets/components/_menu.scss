@@ -4,6 +4,7 @@
  height: 100vh;
  color: white;
  padding-top: 30px;
+position: relative;
 }
 
 #username{
@@ -11,7 +12,7 @@
  margin-bottom: 20px;
  font-family: Montserrat;
  font-weight: 300;
- font-size: 16px;
+ font-size: 20px;
  line-height: 22px;
  color: $blue2;
 }
@@ -34,18 +35,22 @@
 .niveau{
  margin-left: 16px;
  font-family: Montserrat;
- font-weight: 700;
- font-size: 13px;
+ font-weight: 800;
+ font-size: 18px;
 }
 
 .menu_links{
  margin-top: 24px;
+  :hover {
+    color: #6781F7;
+    transition: 0.5s;
+  }
 }
 
 .menu-link1{
  font-family: Montserrat;
  font-weight: 400;
- font-size: 13px;
+ font-size: 14px;
  margin: 11px 0;
  .fas,.far{
  font-size: 33px;
@@ -56,7 +61,7 @@
 .menu-link2{
  font-family: Montserrat;
  font-weight: 400;
- font-size: 13px;
+ font-size: 14px;
  margin: 11px 0;
  .fas,.far{
  font-size: 36px;
@@ -67,7 +72,7 @@
 .menu-link3{
  font-family: Montserrat;
  font-weight: 400;
- font-size: 13px;
+ font-size: 14px;
  margin: 11px 0;
  .fas,.far{
  font-size: 35px;
@@ -78,7 +83,7 @@
 .menu-link4{
  font-family: Montserrat;
  font-weight: 400;
- font-size: 13px;
+ font-size: 14px;
  margin: 11px 0;
  .fas,.far{
  font-size: 31px;
@@ -89,7 +94,7 @@
 .menu-link5{
  font-family: Montserrat;
  font-weight: 400;
- font-size: 13px;
+ font-size: 14px;
  margin: 11px 0;
  .fas,.far{
  font-size: 34px;
@@ -99,6 +104,13 @@
 
 .xp-font{
  font-size: 14px;
- font-weight: 600;
+ font-weight: 700;
 }
 
+.bg-menu {
+  height: 450px;
+  position: absolute;
+  left: 50px;
+  top: 600px;
+  margin-top: 20px;
+}

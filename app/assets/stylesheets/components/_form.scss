@@ -1,14 +1,35 @@
 .container-form {
-  background-color: #222831;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 800px;
-  border-radius: 30px;
+  background-color: #243046;
+  padding : 50px;
+  width: 650px;
+  border-radius: 20px;
   color: white;
   text-decoration: none;
+  position:relative;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  h2 {
+    color: #6781F7;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  input {
+    border-radius: 20px;
+  }
 }
+
 body {
   background-color: #EBEDF3;
 }
+
+.bg-form {
+  height: 800px;
+  position: absolute;
+  top: 80px;
+  margin-left: 250px;
+  transform: rotate(90deg);
+}
+

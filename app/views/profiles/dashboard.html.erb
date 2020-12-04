@@ -1,2 +1,50 @@
-<h1>Profiles#dashboard</h1>
-<p>Find me in app/views/profiles/dashboard.html.erb</p>
+<div class="dashboard">
+  <div class="dashboard-header">
+    <div class="dashboard-header-text">
+      <h3>Hello, <%= current_user.username %>!</h3>
+      <p>Content de te revoir chez nous.</p>
+      <p>Consulte tes statistiques, et si le coeur t’en dit... Lance toi dans tes prochaines leçons !</p>
+      <p>La communauté est à ta disposition si tu as des questions.</p>
+    </div>
+    <%= image_tag "boy_dashboard 1.png", alt: "alttext", class: "img-position" %>
+  </div>
+  <div class="dashboard-card">
+    <h3>Les programmes en cours</h3>
+    <div class="dashboard-grid">
+      <!-- class index-grid is in programs.scss -->
+      <% @inprogress.each do |up|%>
+        <%= render "shared/card-progress", program: up.program %>
+      <% end %>
+    </div>
+  </div>
+  <div class="dashboard-stats">
+    <div class="completion d-flex flex-column align-items-center">
+      <h3>Complétion générale</h3>
+      <%= image_tag "capture-chart.png", alt: "alttext" %>
+    </div>
+    <div class="d-flex flex-column justify-content-between">
+      <div class="dashbox">
+        <p>Leçons en cours</p>
+        <p id="nb-lesson-progress">3</p>
+      </div>
+      <div class="dashbox">
+        <p>Messages envoyés</p>
+        <p id="nb-messages">10</p>
+      </div>
+    </div>
+    <div class="jour-co d-flex flex-column justify-content-between">
+      <p>Vous avez étudié</p>
+      <p id="jours-etudies"><span id="nb-jours-etudies">5</span> jours</p>
+      <p>d'affilé. Bravo!</p>
+    </div>
+  </div>
+  <div class="dashboard-card">
+    <h3>Programmes recommandés</h3>
+    <div class="dashboard-grid">
+      <!-- class index-grid is in programs.scss -->
+      <% @start_programs.each do |program|%>
+        <%= render "shared/card-start", program: program %>
+      <% end %>
+    </div>
+  </div>
+</div>

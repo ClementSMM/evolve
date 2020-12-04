@@ -1,7 +1,6 @@
-
 .card-category {
-   height: 288px;
-   width: 282px;
+   height: 220px;
+   min-width: 210px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -11,24 +10,32 @@
    font-size: 14px;
    font-weight: 300;
    margin-top: 20px;
+   margin-right: 60px;
    background-color: $dark-blue;
+   text-align: center;
+   padding: 18px;
+   p {
+    margin-top: 37px;
+    font-size: 15px;
+    font-weight: 400;
+   }
 }
 
 .card-icon {
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   align-items: center;
+   top: -30px;
+   left: 0;
+   right: 0;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80px;
+   height: 80px;
+   background-color: $light-blue;
+   border-radius: 20px;
 
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  top: -40px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 102px;
-  background-color: $light-blue;
-  border-radius: 20px;
   .card-size {
     height: 64px;
     width: 64px;
@@ -41,21 +48,19 @@
   color: white;
   border-radius: 20px;
   position:relative;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
   padding: 20px;
-  background-color: $dark-blue;
+  background-color: #6781F7;
 
   .card-progress-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
   }
 
   .card-progress-title {
-    margin-left: 10px;
+    margin-left: 50px;
   }
 
   .card-progress-bar {
@@ -69,7 +74,7 @@
   color: white;
   border-radius: 20px;
   position: relative;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
   padding: 20px;
@@ -85,12 +90,10 @@
   .card-progress-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
   }
 
   .card-progress-title {
-    margin-left: 10px;
+    margin-left: 50px;
   }
 
   .card-progress-bar {
@@ -105,26 +108,34 @@
   color: white;
   border-radius: 20px;
   position:relative;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
   padding: 20px;
-  background-color: $dark-blue;
+  background-color: #6781F7;
 
   .card-start-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
   }
 
   .card-start-title {
-    margin-left: 10px;
+    margin-left: 50px;
   }
 
   .card-start-footer {
-    margin-top: 20px;
-    color: $pink;
+    position: absolute;
+    bottom: 0px;
+    p {
+      color: #6E3DC8;
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-weight: 900;
+      font-size:14px;
+    }
   }
 }
 
@@ -134,25 +145,118 @@
   color: white;
   border-radius: 20px;
   position:relative;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 20px;
   padding: 20px;
-  background-color: $dark-blue;
+  background-color: $blue-grey;
 
   .card-locked-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
   }
 
   .card-locked-title {
-    margin-left: 10px;
+    margin-left: 50px;
   }
 
   .card-locked-footer {
-    margin-top: 20px;
-    color: $light-blue;
+    position: absolute;
+    bottom: 0px;
+    p {
+      color: #6E3DC8;
+      background-color: white;
+      border-radius: 20px;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-weight: 900;
+      font-size:14px;
+    }
   }
 }
+
+.icon-position {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.card-lesson {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $background;
+
+  .medal-lesson {
+    position: absolute;
+    width: 70px;
+    top: -20px;
+    right: -25px;
+  }
+}
+
+.card-lesson-wip {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $light-blue;
+
+  .pin-lesson {
+    position: absolute;
+    width: 70px;
+    top: -20px;
+    right: -25px;
+  }
+}
+
+.card-lesson-locked {
+  height: 180px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: $blue-grey;
+
+  .picto-locked {
+    position: absolute;
+    width: 45px;
+    top: 10px;
+    right: 7px;
+  }
+}
+
+.card-review {
+  height: 110px;
+  width: 290px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: $background;
+
+  .stars {
+    position: absolute;
+    width: 20px;
+    top: -10px;
+    left: 45px;
+  }
+}
+
