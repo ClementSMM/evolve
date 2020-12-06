@@ -1,0 +1,7 @@
+<%= link_to step_path(lesson.get_step(current_user)) do %>
+  <div class="card-lesson-wip">
+    <%= image_tag "medal-wip.png", alt: "alttext", class: "pin-lesson"%>
+    <h4><%= lesson.title %></h4>
+    <p><%= lesson.description %></p>
+  </div>
+<% end %>
