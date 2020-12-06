@@ -6,11 +6,16 @@ class Lesson < ApplicationRecord
   def get_step(user)
     program = self.program
     up = UsersProgram.where(program: program, user: user).first
+    last_lesson = Lesson.find(up.last_lesson_id)
 
     if up.status == "done"
-      @step = lesson.steps.first
-    else
+      @step = self.steps.first
+    elsif up.status == "in progress" && last_lesson.number > self.number
+      @step = self.steps.first
+    elsif up.status == "in progress" && last_lesson.number == self.number
       @step = Step.find(up.last_step_id)
+    else
+      @step = nil
     end
     return @step
   end

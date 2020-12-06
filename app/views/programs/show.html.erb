@@ -85,5 +85,15 @@
         <p>“C’était génial. Je ne suis plus prêt de faire un burnout !”</p>
       </div>
     </div>
+
+    <div>
+      <% @lessons.each do |lesson| %>
+        <p><%= lesson.title %></p>
+        <p><%= lesson.description %> </p>
+        <% if lesson.get_step(current_user).present? %>
+          <%= link_to "step",  step_path(lesson.get_step(current_user)) %>
+        <% end %>
+      <% end %>
+    </div>
 </div>
 
