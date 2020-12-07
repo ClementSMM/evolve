@@ -9,6 +9,12 @@
     <p><%= @test.description %> </p>
   </div>
 </div>
-<div class="big-div">
-
+<div class="big-div d-flex align-items-center">
+  <div class="container-form">
+    <%= simple_form_for [@test, @test_answer] do |f| %>
+      <%= f.input :file, as: :file %>
+      <%= f.button :submit, "Soumettre mon test", class: "btn_square" %>
+    <% end %>
+  </div>
 </div>
+
