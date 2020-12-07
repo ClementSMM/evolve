@@ -149,7 +149,7 @@ step2.lesson = lesson1
 step2.save
 
 
-step3 = Step.new(number: 3, title: "Bien repérer les signes", url: "https://www.youtube.com/watch?v=gJwvaCBrpFc", media_type: "video")
+step3 = Step.new(number: 3, title: "Bien repérer les signes", url: "https://www.youtube.com/embed/gJwvaCBrpFc", media_type: "video")
 
 step3.lesson = lesson1
 step3.save
@@ -185,7 +185,7 @@ step2 = Step.new(number: 2, title: "Surmenage, stress et burnout", url: "https:/
 step2.lesson = lesson3
 step2.save
 
-step3 = Step.new(number: 3, title: "Sophrologie anti-stress", url: "https://www.youtube.com/watch?v=CK6OMG_5LMQ", media_type: "video" )
+step3 = Step.new(number: 3, title: "Sophrologie anti-stress", url: "https://www.youtube.com/embed/CK6OMG_5LMQ", media_type: "video" )
 step3.lesson = lesson3
 step3.save
 

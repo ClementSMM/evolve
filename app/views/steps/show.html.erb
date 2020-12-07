@@ -7,9 +7,11 @@
     <% if @step.text_content.present? %>
       <p><%=@step.text_content  %> </p>
     <% elsif @step.media_type == "podcast" %>
-      <iframe src=<%= @step.url %> width='500' frameborder='0' scrolling='no' height='137'></iframe>
+    <div class="d-flex justify-content-center mt-5">
+      <iframe src=<%= @step.url %> width='600' frameborder='0' scrolling='no' height='137'></iframe>
+    </div>
     <% elsif @step.media_type == "video" %>
-      <iframe width="600" height="400" src=<%= @step.url %> frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="800" height="650" src=<%= @step.url %> frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% else %>
     <h2 class="pink-title">Coming soon</h2>
     <% end %>
