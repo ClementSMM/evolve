@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_12_07_143255) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,6 +87,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_143255) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number"
     t.index ["quiz_id"], name: "index_questions_on_quiz_id"
   end
 
