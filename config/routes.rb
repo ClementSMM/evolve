@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get "/profiles/dashboard", to:"profiles#dashboard"
   get "/profiles/profile", to:"profiles#profile"
 
+  resources :questions, only: [:show]
+  get "/test", to:"pages#test"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
