@@ -2,8 +2,8 @@
   <div class="columns">
     <div>
       <div class="summary-program">
-        <h2>Prévenir le burnout</h2>
-        <p>Il vaut mieux prévenir que guérir ! Cette formation vous donne toutes les clés pour identifier, gérer et / ou éviter le burnout.</p>
+        <h2><%= @program.title %></h2>
+        <p><%= @program.description %></p>
       </div>
       <div class="progression-program">
         <h3>Ma progression</h3>
@@ -27,40 +27,21 @@
 
 <div class="list-lessons">
   <h2>Les leçons<br>du programme</h2>
-    <div class="lessons-grid appear">
-      <div class="card-lesson">
-        <%= image_tag "medal.png", alt: "alttext", class: "medal-lesson"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
+    <% if @lessons.present? %>
+      <div class="lessons-grid appear">
+        <% @lessons.each do |lesson| %>
+          <% if lesson.get_status(current_user) == "done"%>
+              <%= render "shared/card-lesson", lesson: lesson %>
+            <% elsif lesson.get_status(current_user) == "in progress" %>
+              <%= render "shared/card-lesson-wip", lesson: lesson %>
+            <% else %>
+            <%= render "shared/card-lesson-locked", lesson: lesson %>
+          <% end %>
+        <% end %>
       </div>
-      <div class="card-lesson">
-        <%= image_tag "medal.png", alt: "alttext", class: "medal-lesson"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
-      </div>
-      <%= link_to step_path(Step.first)  do %>
-      <div class="card-lesson-wip">
-        <%= image_tag "medal-wip.png", alt: "alttext", class: "pin-lesson"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
-      </div>
-      <% end %>
-      <div class="card-lesson-locked">
-        <%= image_tag "lock.png", alt: "alttext", class: "picto-locked"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
-      </div>
-      <div class="card-lesson-locked">
-        <%= image_tag "lock.png", alt: "alttext", class: "picto-locked"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
-      </div>
-      <div class="card-lesson-locked">
-        <%= image_tag "lock.png", alt: "alttext", class: "picto-locked"%>
-        <h4>À bout de forces</h4>
-        <p>Savoir faire la différence entre le stress ou le surmenage et le burnout.</p>
-      </div>
-    </div>
+    <%  else%>
+      <h2 class="pink-title"> Coming Soon</h2>
+    <% end %>
     <div class="link-lesson appear">
       <%= link_to "Continuer", new_user_registration_path, class: "btn_round-lessons" %>
     </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_114410) do
+ActiveRecord::Schema.define(version: 2020_12_06_130856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 2020_12_04_114410) do
     t.bigint "lesson_id", null: false
     t.integer "number"
     t.string "url"
-    t.string "type"
+    t.string "media_type"
     t.text "text_content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
