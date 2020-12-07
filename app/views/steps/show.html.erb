@@ -4,35 +4,36 @@
   </div>
   <div class="separator"></div>
   <div class="big-div-body">
-    <h2>Lorem Ipsum</h2>
-    <p> Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-    <h2>Encore Lorem Ipsum</h2>
-    <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-    <h2>Ipsum Lorem ?</h2>
-    <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
-    <h2>Ipsum GANG</h2>
-    <p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</p>
+    <% if @step.text_content.present? %>
+      <p><%=@step.text_content  %> </p>
+    <% elsif @step.media_type == "podcast" %>
+      <iframe src=<%= @step.url %> width='500' frameborder='0' scrolling='no' height='137'></iframe>
+    <% elsif @step.media_type == "video" %>
+      <iframe width="600" height="400" src=<%= @step.url %> frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <% else %>
+    <h2 class="pink-title">Coming soon</h2>
+    <% end %>
   </div>
 </div>
 
 
 <div class="step-footer-grid">
-  <div class="current-step-card">
-    <h3>Etape</h3>
-    <p>son</p>
-  </div>
-  <div class="step-card">
-    <h3>Etape</h3>
-    <p>son</p>
-  </div>
-  <div class="step-card">
-    <h3>Etape</h3>
-    <p>son</p>
-  </div>
-  <div class="step-card">
-    <h3>Etape</h3>
-    <p>son</p>
-  </div>
+  <% @steps.each do |step| %>
+    <%= link_to step_path(step) do %>
+      <% if @step == step %>
+        <div class="current-step-card">
+      <% else %>
+        <div class="step-card">
+      <% end %>
+        <h3>Etape <%= step.number %></h3>
+        <% if step.text_content.present? %>
+          <p>Article</p>
+        <% else %>
+          <p><%= step.media_type %> </p>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
     <div class="background-bar"></div>
 

@@ -10,7 +10,7 @@
         <div class="stats-program">
           <div class="card-stats-program">
             <h4>Leçons terminées</h4>
-            <p>2 / 5</p>
+            <p><%= @program.number_lessons_done(current_user) %> / 5</p>
           </div>
           <div class="card-stats-program">
             <h4><br>Test final</h4>
