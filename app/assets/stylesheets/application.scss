@@ -11,10 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "controllers/programs";
-@import "controllers/steps";
-@import "controllers/show_program";
+@import "controllers/index";
 @import "profiles/profiles";
+@import "controllers/quiz";
 
 body{
   background-color: $background;

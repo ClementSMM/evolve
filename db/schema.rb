@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_130856) do
+ActiveRecord::Schema.define(version: 2020_12_07_143255) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,10 +46,21 @@ ActiveRecord::Schema.define(version: 2020_12_06_130856) do
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
+  create_table "final_test_answers", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "final_test_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["final_test_id"], name: "index_final_test_answers_on_final_test_id"
+    t.index ["user_id"], name: "index_final_test_answers_on_user_id"
+  end
+
   create_table "final_tests", force: :cascade do |t|
     t.bigint "program_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.text "objectifs"
     t.index ["program_id"], name: "index_final_tests_on_program_id"
   end
 
@@ -75,13 +87,22 @@ ActiveRecord::Schema.define(version: 2020_12_06_130856) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number"
     t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quizz_scores", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "quiz_id", null: false
+    t.integer "number_correct_answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["quiz_id"], name: "index_quizz_scores_on_quiz_id"
+    t.index ["user_id"], name: "index_quizz_scores_on_user_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
     t.bigint "lesson_id", null: false
-    t.integer "user_grade"
-    t.integer "number_correct_aswers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["lesson_id"], name: "index_quizzes_on_lesson_id"
@@ -143,9 +164,13 @@ ActiveRecord::Schema.define(version: 2020_12_06_130856) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "answers", "questions"
+  add_foreign_key "final_test_answers", "final_tests"
+  add_foreign_key "final_test_answers", "users"
   add_foreign_key "final_tests", "programs"
   add_foreign_key "lessons", "programs"
   add_foreign_key "questions", "quizzes"
+  add_foreign_key "quizz_scores", "quizzes"
+  add_foreign_key "quizz_scores", "users"
   add_foreign_key "quizzes", "lessons"
   add_foreign_key "reviews", "programs"
   add_foreign_key "reviews", "users"

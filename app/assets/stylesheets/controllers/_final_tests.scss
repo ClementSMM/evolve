@@ -1,0 +1,35 @@
+ .test-body {
+    color: white;
+    width: 920px;
+    height: 450px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+  }
+
+  .test-header {
+    background-color: $background;
+    top: 0px;
+    border-bottom: 0.01rem solid $blue-grey;
+    padding-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    width: 920px;
+    color: white;
+    .big-title {
+      margin-top: 45px;
+      font-weight: bold;
+      color: white;
+      font-size: 50px;
+    }
+    .big-subtitle {
+      font-size: 25px;
+    }
+  }
+
+ .test-input {
+    color: white;
+    width: 920px;
+    height: 300px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+  }

@@ -6,4 +6,8 @@ class PagesController < ApplicationController
       redirect_to profiles_dashboard_path
     end
   end
+
+  def test
+
+  end
 end

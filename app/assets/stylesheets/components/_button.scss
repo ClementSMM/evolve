@@ -28,6 +28,19 @@
    }
 }
 
+.btn_round3 {
+   background: transparent;
+   border: 0.13rem solid white;
+   border-radius: 2rem;
+   padding: 10px 50px;
+   color: white;
+
+   &:hover {
+     color: $background;
+     background: white;
+   }
+}
+
 .btn_round-profile {
    background: transparent;
    border: 0.13rem solid white;

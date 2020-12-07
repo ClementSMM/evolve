@@ -143,20 +143,20 @@ step2.lesson = lesson1
 step2.save
 
 
-step3 = Step.new(title: "Bien repérer les signes", url: "https://www.youtube.com/watch?v=gJwvaCBrpFc", media_type: "video")
+step3 = Step.new(number: 3, title: "Bien repérer les signes", url: "https://www.youtube.com/embed/gJwvaCBrpFc", media_type: "video")
 
 step3.lesson = lesson1
 step3.save
 
-step4 = Step.new(title:"Exemple", url:"<iframe src='https://www.franceculture.fr/player/export-reecouter?content=59e36844-5d4a-11e5-a571-005056a87c89' width='481' frameborder='0' scrolling='no' height='137'></iframe>", media_type:"podcast")
+step4 = Step.new(number: 4, title:"Exemple", url:"https://www.franceculture.fr/player/export-reecouter?content=59e36844-5d4a-11e5-a571-005056a87c89", media_type:"podcast")
 step4.lesson = lesson1
 step4.save
 
-step1 = Step.new(title:"lesson2 step 1")
+step1 = Step.new(title:"lesson2 step 1", number: 1)
 step1.lesson = lesson2
 step1.save
 
-step1 = Step.new(title: "Définir le stress", number: 2, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
+step1 = Step.new(title: "Définir le stress", number: 1, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
 
 Le stress a été découvert par un physiologiste anglosaxon, Henry Seyle.
 
@@ -175,15 +175,15 @@ Le mot stress est une manière de décrire toute situation que nous considérons
 step1.lesson = lesson3
 step1.save
 
-step2 = Step.new(title: "Surmenage, stress et burnout", url: "<iframe src='https://www.franceculture.fr/player/export-reecouter?content=f218409a-49ec-4c27-8f95-a005a64bf3da' width='481' frameborder='0' scrolling='no' height='137'></iframe>", media_type: "pdocast")
+step2 = Step.new(number: 2, title: "Surmenage, stress et burnout", url: "https://www.franceculture.fr/player/export-reecouter?content=f218409a-49ec-4c27-8f95-a005a64bf3da", media_type: "podcast")
 step2.lesson = lesson3
 step2.save
 
-step3 = Step.new(title: "Sophrologie anti-stress", url: "https://www.youtube.com/watch?v=CK6OMG_5LMQ", media_type: "video" )
+step3 = Step.new(number: 3, title: "Sophrologie anti-stress", url: "https://www.youtube.com/embed/CK6OMG_5LMQ", media_type: "video" )
 step3.lesson = lesson3
 step3.save
 
-step4 = Step.new(title: "Lutter contre le stress au travail", text_content: "Trucs pour mieux gérer son stress
+step4 = Step.new(number:4, title: "Lutter contre le stress au travail", text_content: "Trucs pour mieux gérer son stress
 En parler
 
 Quand on constate qu’on est affecté par un niveau de stress anormalement élevé, il est important de ne pas garder ses préoccupations pour soi et de trouver quelqu’un à qui en parler. Que ce soit un ami ou un membre de la famille, le simple fait d’en parler à un proche et de “vider son sac” peut aider à relâcher la tension et voir les choses sous un autre angle.
@@ -229,3 +229,7 @@ up2.last_lesson_id = lesson3.id
 up2.last_step_id = step2.id
 up2.save
 
+ft = FinalTest.new(description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    objectifs: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+ft.program = prog11
+ft.save
