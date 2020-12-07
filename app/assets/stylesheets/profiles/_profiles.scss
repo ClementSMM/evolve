@@ -92,7 +92,7 @@
       line-height: 20px;
       text-align: center;
     }
-    #nb-messages, #nb-lesson-progress{
+    #nb-programs-done, #nb-programs-progress{
       font-family: Montserrat;
       font-style: normal;
       font-weight: 900;
@@ -166,3 +166,28 @@
   font-size: 20px;
   font-weight: 900;
 }
+
+#container {
+  margin-top: 40px;
+  width: 225px;
+  height: 225px;
+  position: relative;
+}
+
+.statscirc {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+    h4 {
+      font-size: 25px;
+      font-weight: 800;
+      color: white;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: white;
+      text-align: center;
+    }
+}
+

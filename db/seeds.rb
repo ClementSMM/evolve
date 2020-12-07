@@ -7,12 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 UsersProgram.destroy_all
-User.destroy_all
 Program.destroy_all
-
-User.create!(email: "marg@email.com", password: "azerty", level: 1, xp: 10, username: "Marg", first_name: "Margaux", last_name: "Stanislas")
-User.create!(email: "momo@email.com", password: "azerty", level: 3, xp: 50, username: "Momo",  first_name: "Clément", last_name: "Saad")
-User.create!(email: "clem@email.com", password: "azerty", level: 5, xp: 20, username: "Clem", first_name: "Clément", last_name: "Piot")
 
 marg = User.find_by_email("marg@email.com")
 momo = User.find_by_email("momo@email.com")
@@ -37,7 +32,6 @@ users.each do |user|
   up.program = prog1
   up.save
 end
-
 
 users.each do |user|
   up = UsersProgram.new(status: 'done')

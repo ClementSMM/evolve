@@ -15,25 +15,30 @@
       <% end %>
     </div>
   </div>
-  <div class="dashboard-stats appear">
+  <div class="dashboard-stats notappear">
     <div class="completion d-flex flex-column align-items-center">
       <h3>Complétion générale</h3>
-      <%= image_tag "capture-chart.png", alt: "alttext" %>
+          <div id="container" data-global="<%= (global_stats / 100).to_f %>" data-isloaded = "false">
+            <div class="statscirc">
+              <h4><%= global_stats.to_i %>%</h4>
+              <p><%= current_user.xp %> XP<br>Niveau <%= current_user.level %></p>
+            </div>
+          </div>
     </div>
     <div class="d-flex flex-column justify-content-center">
       <div class="dashbox">
-        <p>Leçons<br>en cours</p>
-        <p id="nb-lesson-progress">3</p>
+        <p>Programmes<br>en cours</p>
+        <p id="nb-programs-progress"><%= count_inprogress %></p>
       </div>
       <div class="dashbox">
-        <p>Messages envoyés</p>
-        <p id="nb-messages">10</p>
+        <p>Programmes terminés</p>
+        <p id="nb-programs-done"><%= count_done %></p>
       </div>
     </div>
     <div class="jour-co d-flex flex-column justify-content-center">
-      <p>Vous avez étudié</p>
-      <p id="jours-etudies"><span id="nb-jours-etudies">5</span> jours</p>
-      <p>d'affilé. Bravo!</p>
+      <p>Vous vous êtes connectés</p>
+      <p id="jours-etudies"><span id="nb-jours-etudies"><%= consecutive_days %></span> jours</p>
+      <p>consécutifs. Bravo et merci !</p>
     </div>
   </div>
   <div class="dashboard-card appear">

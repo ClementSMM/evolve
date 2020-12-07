@@ -23,3 +23,26 @@ class ProfilesController < ApplicationController
     return @start_programs
   end
 end
+
+def global_stats
+((current_user.level.to_f * 1000).to_f + current_user.xp).to_f / 100.to_f
+end
+
+def count_inprogress
+@nb_inprogress = UsersProgram.where(user: current_user, status: "in progress")
+@nb_inprogress.count
+end
+
+def count_done
+@nb_done = UsersProgram.where(user: current_user, status: "done")
+@nb_done.count
+end
+
+def consecutive_days
+@count_days = 0
+if (current_user.last_sign_in_at).to_i == (current_user.current_sign_in_at).to_i - 1
+  @count_days += 1
+else
+  @count_days = 0
+end
+end
