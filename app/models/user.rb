@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :users_programs, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_one_attached :photo
+  has_many :final_test_answers, dependent: :destroy
+  has_many :quizz_scores, dependent: :destroy
 end
