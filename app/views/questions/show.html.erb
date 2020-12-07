@@ -1,0 +1,33 @@
+<div class="quiz-big-div">
+  <div class="quiz-big-div-header">
+    <span class="big-quiz-title"><%= @program.title %></span> <span class="big-subtitle"> | Quiz</span>
+  </div>
+  <div class="question-number">
+    Q<%= @question.number %>
+  </div>
+  <div class="the-question">
+    <%= @question.description %>
+  </div>
+
+
+  <div class="question-block">
+    <div class="question-grid">
+      <div class="question-card">
+        <span class="determinant"> A </span> <span class="question">  Ceci est la réponse</span>
+      </div>
+      <div class="question-card">
+        <span class="determinant"> C </span> <span class="question"> | Quiz</span>
+      </div>
+      <div class="question-card">
+        <span class="determinant"> D </span> <span class="question"> | Quiz</span>
+      </div>
+      <div class="question-card">
+        <span class="determinant"> E </span> <span class="question"> | Quiz</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end btn-step-position mt-5">
+    <%= link_to "Question suivante", "#", class: "btn_round3" %>
+  </div>
+</div>
