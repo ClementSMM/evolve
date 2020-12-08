@@ -204,8 +204,8 @@ up2.user = momo
 up2.program = prog11
 up2.save
 
-up2.last_lesson_id = lesson4.id
-up2.last_step_id = step1.id
+up2.last_lesson_id = lesson5.id
+up2.last_step_id = step2.id
 up2.save
 
 #création d'un final test pour program 11
@@ -218,7 +218,7 @@ ft.save
 
 #création d'un quiz pour lesson 3
 quiz = Quiz.new
-quiz.lesson = lesson4
+quiz.lesson = lesson5
 quiz.save
 #création des questions pour le quiz
 
