@@ -21,7 +21,7 @@
 
 <div class="step-footer-grid">
   <% @steps.each do |step| %>
-    <%= link_to step_path(step) do %>
+    <%= link_to  program_users_program_path(@program, step: step), method: :patch do %>
       <% if @step == step %>
         <div class="current-step-card">
       <% else %>
