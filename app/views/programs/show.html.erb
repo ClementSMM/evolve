@@ -48,23 +48,30 @@
 </div>
 
 <div class="list-reviews appear">
-  <h2>Ils vous donnent<br>leur avis</h2>
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <h2>Ils vous donnent<br>leur avis</h2>
+    <% if @program.done?(current_user) %>
+      <%= link_to 'Donne ton avis', new_program_review_path(@program), class: "btn_round "%>
+    <% end %>
+  </div>
     <div class="reviews-grid">
+      <% @reviews.each do |review| %>
       <div class="card-review">
-        <%= image_tag("profil.jpg", class:"avatar-user-reviews")%>
-        <%= image_tag "stars1.png", alt: "alttext", class: "stars"%>
-        <p>“C’était génial. Je ne suis plus prêt de faire un burnout !”</p>
+        <% if review.user.photo.attached? %>
+          <%= cl_image_tag review.user.photo.key, class:"avatar-user-reviews"%>
+        <% else %>
+          <%= image_tag("profil.jpg", class:"avatar-user-reviews")%>
+        <% end %>
+        <div class="stars-place">
+          <% review.rating.times do %>
+              <%= image_tag "stars1.png", alt: "alttext", class: "stars"%>
+          <% end %>
+        </div>
+        <div class="review-content">
+          <p><%= review.content %></p>
+        </div>
       </div>
-      <div class="card-review">
-        <%= image_tag("profil.jpg", class:"avatar-user-reviews")%>
-        <%= image_tag "stars1.png", alt: "alttext", class: "stars"%>
-        <p>“C’était génial. Je ne suis plus prêt de faire un burnout !”</p>
-      </div>
-      <div class="card-review">
-        <%= image_tag("profil.jpg", class:"avatar-user-reviews")%>
-        <%= image_tag "stars1.png", alt: "alttext", class: "stars"%>
-        <p>“C’était génial. Je ne suis plus prêt de faire un burnout !”</p>
-      </div>
+      <% end %>
     </div>
 </div>
 

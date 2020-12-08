@@ -1,0 +1,10 @@
+<div class="container-form">
+  <%= simple_form_for [@program, @reviews] do |f| %>
+  <h2>Donner vottre avis sur la leçon: <%= @program.title %></h2>
+    <%= f.input :content, :maxlength => 140 %>
+    <%= f.input :rating %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Submit", class: "btn_round" %>
+    </div>
+  <% end %>
+</div>

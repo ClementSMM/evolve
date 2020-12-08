@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :programs, only: [:index, :show] do
-    resources :users_programs, only:[:create, :update]
+
+    resources :reviews, only: [:new, :create]
   end
 
+    resources :users_programs, only:[:create, :update]
+  end
 
   resources :steps, only: [:show]
   get "/profiles/dashboard", to:"profiles#dashboard"
