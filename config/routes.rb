@@ -21,7 +21,13 @@ Rails.application.routes.draw do
   resources :questions, only: [:show]
   get "/test", to:"pages#test"
 
+  resources :chatrooms, only: [:show, :create] do
+    resources :messages, only: [:create]
+  end
 
+  namespace :account do
+    resources :chatrooms, only: [:index]
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
