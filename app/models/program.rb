@@ -13,4 +13,9 @@ class Program < ApplicationRecord
     last_lesson = Lesson.find(up.last_lesson_id)
     return last_lesson.number - 1
   end
+
+  def completion(user)
+    up = UsersProgram.where(program: self, user: user).first
+    return up.completion
+  end
 end
