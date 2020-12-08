@@ -1,10 +1,10 @@
 <div class="menu d-flex flex-column">
-<%= image_tag "bg-menu.png", class: 'bg-menu' %>
+  <%= image_tag "bg-menu.png", class: 'bg-menu' %>
   <div class="d-flex align-self-start flex-column menu-profil">
     <% if current_user.photo.attached? %>
-     <%= cl_image_tag current_user.photo.key, height: 150, width: 150, gravity: "face", crop: :fill, class: "avatar-large" %>
+    <%= cl_image_tag current_user.photo.key, height: 150, width: 150, gravity: "face", crop: :fill, class: "avatar-large" %>
     <% else %>
-      <%= image_tag("avatar.png", class:"avatar-large")%>
+    <%= image_tag("avatar.png", class:"avatar-large")%>
     <% end %>
     <span id="username"><%= current_user.username.upcase%> </span>
   </div>
@@ -22,19 +22,19 @@
 
   <div class="menu_links align-self-center d-flex flex-column">
     <%= link_to profiles_dashboard_path, class:"menu-link1 d-flex align-items-center" do %>
-      <i class="fas fa-tachometer-alt"></i>Dashboard
+    <i class="fas fa-tachometer-alt"></i>Dashboard
     <% end %>
     <%= link_to profiles_profile_path, class:"menu-link2 d-flex align-items-center" do %>
-      <i class="far fa-user-circle"></i>Mon profil
+    <i class="far fa-user-circle"></i>Mon profil
     <% end %>
     <%= link_to programs_path, class:"menu-link3 d-flex align-items-center" do %>
-      <i class="far fa-play-circle"></i>Tous les programmes
+    <i class="far fa-play-circle"></i>Tous les programmes
     <% end %>
     <%= link_to "#", class:"menu-link4 d-flex align-items-center" do %>
-      <i class="fas fa-glasses"></i>Au boulot !</a>
+    <i class="fas fa-glasses"></i>Au boulot !</a>
     <% end %>
     <%= link_to "#", class:"menu-link5 d-flex align-items-center" do %>
-      <i class="far fa-comment-dots"></i>Chat communautaire
+    <i class="far fa-comment-dots"></i>Chat communautaire
     <% end %>
   </div>
 
