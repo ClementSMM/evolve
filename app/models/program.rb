@@ -21,7 +21,7 @@ class Program < ApplicationRecord
     else
       return false
     end
-
+  end
 
   def completion(user)
     up = UsersProgram.where(program: self, user: user).first
