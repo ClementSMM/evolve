@@ -69,5 +69,90 @@
       }
     }
   }
-
 }
+
+
+
+/* style for success and fail */
+
+
+.dabig-div {
+  display: flex;
+  position: relative;
+  width: 940px;
+  height: 800px;
+  background-color: $background;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  .confetti-position {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 275px;
+  }
+  .congrat-text {
+    margin-top: 500px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    .test-score {
+      font-size: 55px;
+      color: $light-blue;
+    }
+  }
+  .congrat-text2 {
+    margin-top: 900px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+  }
+  .btn-div {
+    height: 30px;
+  }
+}
+
+.dabig-div2 {
+  display: flex;
+  position: relative;
+  width: 940px;
+  height: 800px;
+  background-color: $background;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  .brain-position {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    right: 275px;
+  }
+  .deception-text {
+    margin-top: 500px;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    .test-score-fail {
+      font-size: 55px;
+      color: #FF415B;
+    }
+  }
+  .btn-div {
+    height: 30px;
+  }
+}
+
+
+
+
+
+
+
