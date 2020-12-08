@@ -28,6 +28,7 @@ class User < ApplicationRecord
         count_days = 0
       end
       return count_days
+  end
 
   has_many :final_test_answers, dependent: :destroy
   has_many :quizz_scores, dependent: :destroy
