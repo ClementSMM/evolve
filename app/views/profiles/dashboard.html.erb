@@ -18,9 +18,9 @@
   <div class="dashboard-stats notappear">
     <div class="completion d-flex flex-column align-items-center">
       <h3>Complétion générale</h3>
-          <div id="container" data-global="<%= (global_stats / 100).to_f %>" data-isloaded = "false">
+          <div id="container" data-global="<%= (current_user.global_stats / 100).to_f %>" data-isloaded = "false">
             <div class="statscirc">
-              <h4><%= global_stats.to_i %>%</h4>
+              <h4><%= current_user.global_stats.to_i %>%</h4>
               <p><%= current_user.xp %> XP<br>Niveau <%= current_user.level %></p>
             </div>
           </div>
@@ -28,16 +28,16 @@
     <div class="d-flex flex-column justify-content-center">
       <div class="dashbox">
         <p>Programmes<br>en cours</p>
-        <p id="nb-programs-progress"><%= count_inprogress %></p>
+        <p id="nb-programs-progress"><%= current_user.count_inprogress %></p>
       </div>
       <div class="dashbox">
         <p>Programmes terminés</p>
-        <p id="nb-programs-done"><%= count_done %></p>
+        <p id="nb-programs-done"><%= current_user.count_done %></p>
       </div>
     </div>
     <div class="jour-co d-flex flex-column justify-content-center">
       <p>Vous vous êtes connectés</p>
-      <p id="jours-etudies"><span id="nb-jours-etudies"><%= consecutive_days %></span> jours</p>
+      <p id="jours-etudies"><span id="nb-jours-etudies"><%= current_user.consecutive_days %></span> jours</p>
       <p>consécutifs. Bravo et merci !</p>
     </div>
   </div>
