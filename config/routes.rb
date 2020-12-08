@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :programs, only: [:index, :show] do
-    resources :users_programs, only:[:create]
+    resources :users_programs, only:[:create, :update]
   end
 
 
