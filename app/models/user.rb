@@ -28,5 +28,15 @@ class User < ApplicationRecord
         count_days = 0
       end
       return count_days
+
+  has_many :final_test_answers, dependent: :destroy
+  has_many :quizz_scores, dependent: :destroy
+
+  def add_xp(number)
+    xp += number
+    if xp >= 1000
+      xp -= 1000
+      level += 1
+    end
   end
 end

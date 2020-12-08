@@ -9,10 +9,14 @@
 UsersProgram.destroy_all
 Program.destroy_all
 
+#récupérer les users présents
+
 marg = User.find_by_email("marg@email.com")
 momo = User.find_by_email("momo@email.com")
 clem = User.find_by_email("clem@email.com")
 users = [marg, momo, clem]
+
+#création des programs
 
 prog1 = Program.create!(title: "Design Thinking", description: "Penser oui mais autrement.", unlock_program: 1)
 prog2 = Program.create!(title: "Protection de l'innovation" , description: "Vous avez peur que vos idées soient reprises par d'autre? Apprenez ici comment les protéger.", unlock_program: 1)
@@ -25,6 +29,9 @@ prog8 = Program.create!(title: "Comptabilité", description: "Il est important d
 prog9 = Program.create!(title: "Pitch - communication orale", description: "Il est important d'être capable de présenter votre projet. Apprenez les tecniques de pitch et entrainez vous à développer vos idées.", unlock_program: 5)
 prog10 = Program.create!(title: "Maitriser Instagram", description: "Devenez un expert de l'utilisation d'instagram à des fins professionnels et boostez votre campagne Marketing.", unlock_program: 5)
 prog11 = Program.create!(title: "Prévenir le burnout", description: "Il vaut mieux prévenir que guérir ! Cette formation vous donne toutes les clés pour identifier, gérer et / ou éviter le burnout.", unlock_program: 3)
+
+
+#création des relations entre les users et les programs
 
 users.each do |user|
   up = UsersProgram.new(status: 'done')
@@ -76,6 +83,8 @@ up.user = clem
 up.program = prog8
 up.save
 
+#création des lessons
+
 lesson1 = Lesson.new(title: "À bout de forces", description: "Savoir faire la différence entre le stress ou le surmenage et le burnout.", number: 1)
 lesson1.program = prog11
 lesson1.save
@@ -95,6 +104,9 @@ lesson4.save
 lesson5 = Lesson.new(title: "La vie après le burnout", description: "Apprendre à faire désormais les choses différemment", number: 5)
 lesson5.program = prog11
 lesson5.save
+
+
+#création des steps des lessons
 
 step1 = Step.new(number:1, title: "Qu'est-ce que le burnout", text_content: "
 
@@ -220,6 +232,12 @@ L’une des meilleures façons pour relâcher le stress instantanément et le co
 step4.lesson = lesson3
 step4.save
 
+
+# Manque step pour lesson 4
+
+
+#relation entre momo et program 11
+
 up2 = UsersProgram.new(status: "in progress")
 up2.user = momo
 up2.program = prog11
@@ -229,7 +247,25 @@ up2.last_lesson_id = lesson3.id
 up2.last_step_id = step2.id
 up2.save
 
+#création d'un final test pour program 11
+
 ft = FinalTest.new(description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                     objectifs: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
 ft.program = prog11
 ft.save
+
+
+#création d'un quiz pour lesson 3
+
+#création des questions pour le quiz
+
+#question1 = Question.new(description: "texte de la question", number: 1)
+#question1.quiz = quiz1
+#question1.save
+
+#création des réponses pour les questions
+
+#reponse1 = Answer.new(, correct: true)
+#reponse1.question = question1
+#reponse1.save
+
