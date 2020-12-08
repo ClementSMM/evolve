@@ -9,6 +9,7 @@
 UsersProgram.destroy_all
 Program.destroy_all
 
+
 #récupérer les users présents
 
 marg = User.find_by_email("marg@email.com")

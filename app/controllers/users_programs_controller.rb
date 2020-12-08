@@ -18,6 +18,7 @@ class UsersProgramsController < ApplicationController
     lesson = step.lesson
     if lesson.number >= last_lesson.number && step.number > last_step.number
       up.update(last_step_id: step.id, last_lesson_id: lesson.id)
+      up.update_completion
       redirect_to step_path(step) if up.save
     else
       redirect_to step_path(step)
