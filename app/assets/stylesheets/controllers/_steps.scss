@@ -1,14 +1,11 @@
 .big-div {
   width: 1030px;
-
   margin: 75px auto;
   border-radius: 20px;
   padding-bottom: 50px;
   background-color: $background;
   .big-div-header {
     background-color: $background;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0px;
     border-bottom: 0.01rem solid $blue-grey;
     padding-top: 30px;
@@ -19,23 +16,23 @@
       margin-top: 45px;
       font-weight: bold;
       color: white;
-      font-size: 50px;
+      font-size: 35px;
     }
     .big-subtitle {
       font-size: 25px;
+      font-weight: 300;
     }
   }
 
   .separator {
     height: 50px;
-    position: sticky;
     top: 106px;
     background-color: $background;
   }
   .big-div-body {
     color: white;
     width: 920px;
-    height: 600px;
+    height: 530px;
     margin-left: 50px;
     padding-bottom: 20px;
     overflow-y: scroll;
@@ -60,7 +57,9 @@
       color: white;
       text-align: center;
       margin-top: 35px;
-      font-weight: lighter;
+      font-weight: 400;
+      padding-top: 35px;
+      font-size: 18px;
     }
     p {
       text-align: center;
@@ -79,7 +78,9 @@
       color: white;
       text-align: center;
       margin-top: 35px;
-      font-weight: lighter;
+      font-weight: 400;
+      padding-top: 35px;
+      font-size: 18px;
     }
     p {
       text-align: center;
