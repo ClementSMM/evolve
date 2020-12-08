@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :users_programs, dependent: :destroy
   has_many :reviews, dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_one_attached :photo
 
   def global_stats
