@@ -13,4 +13,12 @@ class Program < ApplicationRecord
     last_lesson = Lesson.find(up.last_lesson_id)
     return last_lesson.number - 1
   end
+  def done?(user)
+    up = UsersProgram.where(program: self, user: user).first
+    if up.status == "done"
+      return true
+    else
+      return false
+    end
+  end
 end

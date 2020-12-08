@@ -10,6 +10,7 @@ class ProgramsController < ApplicationController
   def show
     @program = Program.find(params[:id])
     @lessons = @program.lessons
+    @reviews = @program.reviews.last(3)
   end
 
   private

@@ -251,7 +251,7 @@
 }
 
 .card-review {
-  height: 110px;
+  height: 140px;
   width: 290px;
   color: white;
   border-radius: 20px;
@@ -259,12 +259,11 @@
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: $background;
-
   .stars {
-    position: absolute;
     width: 20px;
-    top: -10px;
-    left: 45px;
+  }
+  .review-content {
+    width: 300px;
   }
 }
 

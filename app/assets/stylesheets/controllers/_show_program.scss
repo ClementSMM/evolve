@@ -118,7 +118,6 @@
     font-size: 20px;
     font-weight: 800;
     color: white;
-    margin-bottom: 70px;
   }
 }
 
@@ -128,6 +127,7 @@
   grid-gap: 30px;
   margin-bottom: 80px;
   margin-right: 50px;
+
   p {
     margin-top:20px;
     margin-left: 20px;
@@ -135,6 +135,11 @@
     color: white;
     font-size: 14px;
     font-weight: 400;
+  }
+  .stars-place {
+    position: absolute;
+    top: -15px;
+    left: 40px;
   }
 }
 

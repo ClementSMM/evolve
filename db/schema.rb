@@ -145,7 +145,6 @@ ActiveRecord::Schema.define(version: 2020_12_08_084818) do
     t.string "username"
     t.integer "level"
     t.integer "xp"
-    t.integer "count_days"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

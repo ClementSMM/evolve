@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  resources :programs, only: [:index, :show]
+  resources :programs, only: [:index, :show] do
+    resources :reviews, only: [:new, :create]
+  end
 
   resources :steps, only: [:show]
   get "/profiles/dashboard", to:"profiles#dashboard"
