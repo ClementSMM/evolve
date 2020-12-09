@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="chat-big-div">
   <div class="chat-header">
     <div class="chat-header-text">
@@ -17,3 +18,18 @@
   </div>
 
 </div>
+=======
+<div class="conversation-form">
+  <h2>Chercher un membre d'evolve</h2>
+  <%= simple_form_for @chatroom do |f| %>
+    <%= f.input :guest, collection: @users, label: false %>
+    <%= f.button :submit, "nouvelle conversation", class: "btn_square" %>
+  <% end %>
+</div>
+
+<% @chatrooms.each do |chatroom| %>
+  <%= link_to chatroom_path(chatroom) do %>
+    <p>Chatroom <%= chatroom.id %> </p>
+  <% end %>
+<% end %>
+>>>>>>> 5732115f77867b3ec520be55cfe0cff93c8a8cc2
