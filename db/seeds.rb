@@ -30,18 +30,21 @@ prog9 = Program.create!(title: "Pitch - communication orale", description: "Il e
 prog10 = Program.create!(title: "Maitriser Instagram", description: "Devenez un expert de l'utilisation d'instagram à des fins professionnels et boostez votre campagne Marketing.", unlock_program: 5)
 prog11 = Program.create!(title: "Prévenir le burnout", description: "Il vaut mieux prévenir que guérir ! Cette formation vous donne toutes les clés pour identifier, gérer et / ou éviter le burnout.", unlock_program: 3)
 
+puts "11 programs créés"
 
 #création des relations entre les users et les programs
 
 users.each do |user|
   up = UsersProgram.new(status: 'done')
   up.user = user
+  up.final_test_status = "done"
   up.program = prog1
   up.save
 end
 
 users.each do |user|
   up = UsersProgram.new(status: 'done')
+  up.final_test_status = "done"
   up.user = user
   up.program = prog2
   up.save
@@ -60,16 +63,19 @@ up.save
 
 up = UsersProgram.new(status: "done")
 up.user = clem
+up.final_test_status = "done"
 up.program = prog4
 up.save
 
 up = UsersProgram.new(status: "done")
 up.user = clem
+up.final_test_status = "done"
 up.program = prog5
 up.save
 
 up = UsersProgram.new(status: "done")
 up.user = clem
+up.final_test_status = "done"
 up.program = prog6
 up.save
 
@@ -80,8 +86,11 @@ up.save
 
 up = UsersProgram.new(status: "done")
 up.user = clem
+up.final_test_status = "done"
 up.program = prog8
 up.save
+
+puts "relations entre users et programmes créées"
 
 #création des lessons
 
@@ -104,6 +113,8 @@ lesson4.save
 lesson5 = Lesson.new(title: "La vie après le burnout", description: "Apprendre à faire désormais les choses différemment", number: 5)
 lesson5.program = prog11
 lesson5.save
+
+puts "5 lessons créées"
 
 #création des steps des lessons
 
@@ -195,6 +206,8 @@ step4 = Step.new(number:4, title: "Retrouver du sens après un burnout", url:"ht
 step4.lesson = lesson5
 step4.save
 
+puts "steps des lessons créés"
+
 #relation entre momo et program 11
 
 up2 = UsersProgram.new(status: "in progress")
@@ -213,11 +226,14 @@ ft = FinalTest.new(description: "Maintenant que vous en savez beaucoup plus sur 
 ft.program = prog11
 ft.save
 
+puts "1 final test créé"
 
 #création d'un quiz pour lesson 5
 quiz = Quiz.new
 quiz.lesson = lesson5
 quiz.save
+
+puts "1 quiz créé"
 #création des questions pour le quiz
 
 question1 = Question.new(description: "Qu'est-ce que le burnout ?", number: 1)
@@ -239,6 +255,8 @@ question4.save
 question5 = Question.new(description: "Comment rebondir après un burnout ?", number: 5)
 question5.quiz = quiz
 question5.save
+
+puts "5 questions du quiz créées"
 
 #création des réponses pour les questions
 
@@ -332,3 +350,4 @@ answer4.save
 
 #-------------------------------
 
+puts "réponses du quiz créées"
