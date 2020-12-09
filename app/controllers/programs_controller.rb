@@ -26,7 +26,7 @@ class ProgramsController < ApplicationController
     programs.each do |program|
       if program.users.include?(current_user)
         usersprogram = ups.find { |up| up.program_id == program.id }
-       @programs_up << [program, usersprogram]
+        @programs_up << [program, usersprogram]
       else
         @programs_up << [program, nil]
       end
