@@ -1,6 +1,8 @@
 class Account::ChatroomsController < ApplicationController
   def index
-    @chatrooms = Chatroom.where(user1_id: current_user.id)
-    .or(Chatroom.where(user2_id: current_user.id))
+    @chatrooms = Chatroom.where(guest: current_user)
+    .or(Chatroom.where(host: current_user))
+    @chatroom = Chatroom.new
+    @users = User.all
   end
 end

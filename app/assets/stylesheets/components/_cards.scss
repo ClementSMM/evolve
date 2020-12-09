@@ -266,3 +266,39 @@
   }
 }
 
+.card-chat {
+  position: relative;
+  width: 50%;
+  height: 70px;
+  background-color: $background;
+  border-radius: 20px;
+  margin-top: 30px;
+  .text-chat {
+    display: flex;
+    color: white;
+    padding-top: 20px;
+    margin-left: 80px;
+  }
+  .text-chat-name {
+    color: white;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .text-chat-lvl {
+    color: $light-blue;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .avatar-img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 3px solid #6781F7;
+    top: -6px;
+    left: -15px;
+  }
+}
+

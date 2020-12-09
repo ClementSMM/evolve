@@ -32,3 +32,29 @@ body {
   margin-left: 250px;
   transform: rotate(90deg);
 }
+
+.conversation-form {
+  width: 80%;
+  color: white;
+  text-decoration: none;
+  position:relative;
+  font-weight: 600;
+  font-size: 14px;
+  h2 {
+    color: #6781F7;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  input {
+    border-radius: 20px;
+  }
+}
+
+#new_chatroom{
+  align-items: center;
+}
+
+#chatroom_guest{
+  width: 400px;
+  margin-right: 20px;
+}
