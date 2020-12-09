@@ -60,7 +60,7 @@
         <% if review.user.photo.attached? %>
           <%= cl_image_tag review.user.photo.key, class:"avatar-user-reviews"%>
         <% else %>
-          <%= image_tag("profil.jpg", class:"avatar-user-reviews")%>
+          <%= image_tag("avatar.png", class:"avatar-user-reviews")%>
         <% end %>
         <div class="stars-place">
           <% review.rating.times do %>

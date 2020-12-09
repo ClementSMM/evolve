@@ -6,5 +6,6 @@ class StepsController < ApplicationController
     lesson = @step.lesson
     @steps = lesson.steps
     @program = lesson.program
+    @quiz = lesson.quiz
   end
 end

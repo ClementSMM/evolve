@@ -23,12 +23,12 @@ class User < ApplicationRecord
   end
 
   def consecutive_days
-      if (self.last_sign_in_at).to_i == (self.current_sign_in_at).to_i - 1
-        count_days += 1
-      else
-        count_days = 0
-      end
-      return count_days
+    if (self.last_sign_in_at).to_i == (self.current_sign_in_at).to_i - 1
+      count_days += 1
+    else
+      count_days = 0
+    end
+    return count_days
   end
 
   has_many :final_test_answers, dependent: :destroy
