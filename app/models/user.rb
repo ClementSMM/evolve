@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_one_attached :photo
 
+  def name
+    self.username + " - lev " + self.level.to_s
+  end
+
   def global_stats
     ((self.level.to_f * 1000).to_f + self.xp).to_f / 100.to_f
   end
