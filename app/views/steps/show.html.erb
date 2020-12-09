@@ -20,7 +20,7 @@
 
 <div class="step-footer-grid">
   <% @steps.each do |step| %>
-    <%= link_to  program_users_program_path(@program, step: step), method: :patch do %>
+    <%= link_to program_users_program_path(@program, step: step), method: :patch do %>
       <% if @step == step %>
         <div class="current-step-card">
       <% else %>
@@ -38,6 +38,9 @@
 </div>
     <div class="background-bar"></div>
 
-<div class="d-flex justify-content-end btn-step-position">
-  <%= link_to "Quiz !", "#", class: "btn_round2" %>
-</div>
+  <% if @step.number == 4 %>
+  <div class="d-flex justify-content-end btn-step-position">
+  <%= link_to "Quiz !", quiz_quizz_scores_path(@quiz), method: :post, class: "btn_round2" %>
+  <% end %>
+  </div>
+

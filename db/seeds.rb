@@ -9,7 +9,6 @@
 UsersProgram.destroy_all
 Program.destroy_all
 
-
 #récupérer les users présents
 
 marg = User.find_by_email("marg@email.com")
@@ -105,7 +104,6 @@ lesson4.save
 lesson5 = Lesson.new(title: "La vie après le burnout", description: "Apprendre à faire désormais les choses différemment", number: 5)
 lesson5.program = prog11
 lesson5.save
-
 
 #création des steps des lessons
 
@@ -216,7 +214,7 @@ ft.program = prog11
 ft.save
 
 
-#création d'un quiz pour lesson 3
+#création d'un quiz pour lesson 5
 quiz = Quiz.new
 quiz.lesson = lesson5
 quiz.save
