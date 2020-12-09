@@ -26,13 +26,11 @@ class User < ApplicationRecord
     @nb_done.count
   end
 
-  def consecutive_days
-      if (self.last_sign_in_at).to_i == (self.current_sign_in_at).to_i - 1
-        count_days += 1
-      else
-        count_days = 0
-      end
-      return count_days
+  def consecutive_days?
+    (Date.today - last_sign_in_at.to_date).to_i == (days_streak)
+  end
+  def more?
+    (Date.today - last_sign_in_at.to_date).to_i < (days_streak)
   end
 
   has_many :final_test_answers, dependent: :destroy

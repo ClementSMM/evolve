@@ -11,6 +11,12 @@ class ProgramsController < ApplicationController
     @program = Program.find(params[:id])
     @lessons = @program.lessons
     @reviews = @program.reviews.last(3)
+    if current_user.consecutive_days?
+      current_user.update(days_streak: current_user.days_streak + 1)
+    elsif current_user.more?
+    else
+      current_user.update(days_streak: 0, last_sign_in_at: Date.today)
+    end
   end
 
   private
