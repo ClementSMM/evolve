@@ -5,7 +5,7 @@
   .chat-header {
     position: relative;
     width: 940px;
-    height: 205px;
+    height: 350px;
     background-color: $background;
     border-radius: 20px;
     .chat-header-text {
@@ -20,8 +20,8 @@
     .chat-icon-position {
       position: absolute;
       width: 350px;
-      right: -30px;
-      top: -85px;
+      right: 40px;
+      top: -25px;
     }
   }
   .chat-body {

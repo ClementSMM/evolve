@@ -34,14 +34,10 @@ body {
 }
 
 .conversation-form {
-  background-color: #243046;
-  padding : 50px;
   width: 80%;
-  border-radius: 20px;
   color: white;
   text-decoration: none;
   position:relative;
-  margin: 0 auto;
   font-weight: 600;
   font-size: 14px;
   h2 {
@@ -55,7 +51,6 @@ body {
 }
 
 #new_chatroom{
-  display: flex;
   align-items: center;
 }
 
