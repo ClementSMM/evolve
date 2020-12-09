@@ -6,6 +6,9 @@ class User < ApplicationRecord
   has_many :users_programs, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :final_test_answers, dependent: :destroy
+  has_many :quizz_scores, dependent: :destroy
+
   has_one_attached :photo
 
   def name
@@ -32,9 +35,6 @@ class User < ApplicationRecord
   def more?
     (Date.today - last_sign_in_at.to_date).to_i < (days_streak)
   end
-
-  has_many :final_test_answers, dependent: :destroy
-  has_many :quizz_scores, dependent: :destroy
 
   def add_xp(number)
     xp += number

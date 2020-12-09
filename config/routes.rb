@@ -26,5 +26,9 @@ Rails.application.routes.draw do
     resources :chatrooms, only: [:index]
   end
 
+  resources :quizzes, only: [:show] do
+    resources :quizz_scores, only: [:create]
+  end
+  resources :quizz_scores, only: [:show, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

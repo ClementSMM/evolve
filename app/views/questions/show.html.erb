@@ -1,6 +1,6 @@
 <div class="quiz-big-div">
   <div class="quiz-big-div-header">
-    <span class="big-quiz-title"><%= @program.title %></span> <span class="big-subtitle"> | Quiz</span>
+    <span class="big-quiz-title"><%= @program.title %> | </span> <span class="big-subtitle"> Quiz</span>
   </div>
   <div class="question-number">
     Q<%= @question.number %>
@@ -12,22 +12,33 @@
 
   <div class="question-block">
     <div class="question-grid">
-      <div class="question-card">
-        <span class="determinant"> A </span> <span class="question">  Ceci est la réponse</span>
-      </div>
-      <div class="question-card">
-        <span class="determinant"> B </span> <span class="question"> | Quiz</span>
-      </div>
-      <div class="question-card">
-        <span class="determinant"> C </span> <span class="question"> | Quiz</span>
-      </div>
-      <div class="question-card">
-        <span class="determinant"> D </span> <span class="question"> | Quiz</span>
-      </div>
+      <% @answers.each_with_index do |answer, index| %>
+
+      <% next_id = @question.quiz.question_ids.index(@question.id)+1 %>
+
+        <% if answer.correct %>
+          <%= link_to quizz_score_path(@quizz_score, index_question: next_id-1), method: :patch do %>
+            <div class="question-card">
+            <span class="determinant"><%= index + 1 %></span><span class="question"><%= answer.content %></span>
+            </div>
+        <% end %>
+
+      <% elsif next_id <= 4 %>
+       <%= link_to question_path(@question.quiz.question_ids[next_id]) do %>
+       <div class="question-card">
+        <span class="determinant"><%= index + 1 %></span><span class="question"><%= answer.content %></span>
+        </div>
+       <% end %>
+
+      <% else %>
+        <%= link_to quizz_score_path(@quizz_score) do %>
+          <div class="question-card">
+          <span class="determinant"><%= index + 1 %></span><span class="question"><%= answer.content %></span>
+          </div>
+        <% end %>
+      <% end %>
+      <% end %>
+
     </div>
   </div>
 
-  <div class="d-flex justify-content-end btn-step-position mt-5">
-    <%= link_to "Question suivante", "#", class: "btn_round3" %>
-  </div>
-</div>
