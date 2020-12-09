@@ -1,35 +1,32 @@
-<<<<<<< HEAD
 <div class="chat-big-div">
   <div class="chat-header">
     <div class="chat-header-text">
-      blabla bliblibli bloblo bleblele hahaha hohoho hihih Squalala
+      <div class="conversation-form">
+        <h2>Cherche un membre d'evolve avec qui discuter!</h2>
+        <%= simple_form_for @chatroom do |f| %>
+        <%= f.input :guest, collection: @users, label: false %>
+
+        <%= f.button :submit, "Nouvelle conversation", class: "btn_square"%>
+        <% end %>
+      </div>
     </div>
     <%= image_tag "chat.png", alt: "let's talk!", class: "chat-icon-position" %>
-
   </div>
-  <div class="chat-body">
 
+  <div class="chat-body">
+    <% @chatrooms.each do |chatroom| %>
+    <%= link_to chatroom_path(chatroom) do %>
     <div class="card-chat">
       <div class="text-chat">
-        username | userlevel
+        <% if chatroom.guest == current_user %>
+        <div class="text-chat-name"><%= chatroom.host.username%></div> <div class="text-chat-lvl"><%= "Niveau " + chatroom.host.level.to_s %></div>
+        <% else %>
+        <div class="text-chat-name"><%= chatroom.guest.username %></div> <div class="text-chat-lvl"><%= "Niveau " + chatroom.guest.level.to_s %></div>
+        <% end %>
       </div>
-        <img src="/assets/avatar-8ce3960ebb83efeb7246497bfc891c06e0e538bccd7bbf3dff520dcf9afae20d.png" alt="#" class="avatar-img">
+      <img src="/assets/avatar-8ce3960ebb83efeb7246497bfc891c06e0e538bccd7bbf3dff520dcf9afae20d.png" alt="#" class="avatar-img">
     </div>
+    <% end %>
+    <% end %>
   </div>
-
 </div>
-=======
-<div class="conversation-form">
-  <h2>Chercher un membre d'evolve</h2>
-  <%= simple_form_for @chatroom do |f| %>
-    <%= f.input :guest, collection: @users, label: false %>
-    <%= f.button :submit, "nouvelle conversation", class: "btn_square" %>
-  <% end %>
-</div>
-
-<% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom_path(chatroom) do %>
-    <p>Chatroom <%= chatroom.id %> </p>
-  <% end %>
-<% end %>
->>>>>>> 5732115f77867b3ec520be55cfe0cff93c8a8cc2
