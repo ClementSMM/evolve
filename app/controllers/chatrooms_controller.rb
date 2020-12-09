@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
   def create
-
+    raise
   end
 
   def show

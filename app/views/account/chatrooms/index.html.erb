@@ -1,4 +1,7 @@
-<%= link_to "Nouvelle Conversation", chatrooms_path, class: "btn_square"  %>
+<%= simple_form_for @chatroom do |f| %>
+  <%= f.input :user2, collection: @users %>
+  <%= f.button :submit, "lancer une conversation", class: "btn_square" %>
+<% end %>
 
 <% @chatrooms.each do |chatroom| %>
   <%= link_to chatroom_path(chatroom) do %>
