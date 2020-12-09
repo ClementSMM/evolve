@@ -98,7 +98,7 @@ lesson3 = Lesson.new(title: "Lutter contre le stress", description: "Définir se
 lesson3.program = prog11
 lesson3.save
 
-lesson4 = Lesson.new(title: "Le burnout ne passera pas", description: "Découvrir quels facteurs liés au travail favorisent le burnout", number: 4)
+lesson4 = Lesson.new(title: "Le burnout ne passera pas", description: "Découvrir quels facteurs liés à l'entrepreneuriat favorisent le burnout", number: 4)
 lesson4.program = prog11
 lesson4.save
 
@@ -109,133 +109,93 @@ lesson5.save
 
 #création des steps des lessons
 
-step1 = Step.new(number:1, title: "Qu'est-ce que le burnout", text_content: "
-
-Le burn out est un état d'épuisement physique, émotionnel et mental lié à une dégradation du rapport d'une personne à son travail.
-
-Le burn out ou épuisement professionnel a été initialement observé chez les soignants.
-
-Si ce groupe professionnel reste particulièrement exposé, on sait désormais que le burn out peut concerner tous les métiers qui demandent un engagement professionnel intense.
-Il frappe autant les femmes que les hommes et se situe en 2e position dans les affections d’origine professionnelle.
-
-Le burn out apparaît quand le travailleur ressent un écart trop important entre ses attentes, la représentation qu'il se fait de son métier et la réalité de son travail.
-Concrètement, face à des situations de stress professionnel chronique, la personne en burn out ne parvient plus à faire face.
-
-Le burn out n'est pas une maladie mentale. C'est un ensemble de symptômes (syndrome) résultant de la dégradation du rapport subjectif au travail.
-
-Cela se traduit par :
-
-    Un épuisement émotionnel, physique et psychique. La personne a la sensation d'être 'vidée de ses ressources'.
-    Les temps de repos habituels (sommeil, week-end, congés, etc.) ne suffisent plus à soulager cette fatigue.
-
-    Le développement d'une attitude cynique dans le cadre du travail.
-    Pour se protéger de la déception émotionnelle (il n'arrive plus à 'bien' faire son travail), le professionnel se désengage de son travail et 'déshumanise' les gens qu'il est amené à côtoyer (clients, patients, collègues).
-    Il en résulte un comportement dur, négatif.
-
-    Une dévalorisation de soi, la perte de la sensation d'accomplissement au travail, l'impression de ne plus être à la hauteur.")
+step1 = Step.new(number:1, title: "Qu'est-ce que le burnout", url:"https://www.youtube.com/embed/KRsYGksCu0I", media_type:"video")
 step1.lesson = lesson1
 step1.save
 
-step2 = Step.new(title: "Définir le stress", number: 2, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
-
-Le stress a été découvert par un physiologiste anglosaxon, Henry Seyle.
-
-Il a décrit les réponses de l’organisme produites par des agressions physiques ou chimiques. Il a d’abord donné le nom de « syndrome général d’adaptation » à ces réactions. C’est ainsi qu’est né le stress.
-
-Le stress a été décrit comme une réponse normale d’adaptation de votre organisme aux contraintes et agressions que vous subissez chaque jour dans le cadre de votre vie quotidienne. Cette adaptation concerne vos systèmes physiologiques de régulation et de défense, mais aussi des réactions psychologiques et comportementales.
-
-C'est un phénomène essentiel à notre survie, très complexe, nécessitant la mis en oeuvre de nombreux systèmes physiologiques de l'organisme qu'ils soint physiques ou psuchologiques, cariaques ou endocriniens, neurologiques ou psychologiques. Cette compléxité du stress est probablement à l'origne de sa mauvaise compréhension, elle-même source de beaucoup d'erreurs dans la signification même de ce mot.
-
-Le stress a été décrit comme une réponse normale d’adaptation de votre organisme aux contraintes et agressions que vous subissez chaque jour dans le cadre de votre vie quotidienne. Cette adaptation concerne vos systèmes physiologiques de régulation et de défense, mais aussi des réactions psychologiques et comportementales.
-
-Le stress correspond aussi aux composantes de l’agression qui va enclencher cette réaction d’adaptation. Le stress est alors un agent stresseur qui peut survenir de manière aigue ou chronique, évènementielle, conjoncturelle ou structurelle, et qui peut selon les cas concerner votre vie personnelle ou votre vie professionnelle. On dit alors : 'je suis stressé'.
-
-Le mot stress est une manière de décrire toute situation que nous considérons comme dangereuse pour notre équilibre personnel, difficile à éviter voire insupportable. \n\n -Le Figaro")
-
+step2 = Step.new(title: "Bien repérer les signes", number: 2, url:"https://medium.com/oser-r%C3%AAver-sa-carri%C3%A8re/burn-out-signes-annonciateurs-et-sympt%C3%B4mes-b88cab5a4d9a", media_type:"text")
 step2.lesson = lesson1
 step2.save
 
-
-step3 = Step.new(number: 3, title: "Bien repérer les signes", url: "https://www.youtube.com/embed/gJwvaCBrpFc", media_type: "video")
-
+step3 = Step.new(number: 3, title: "Témoignage", url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/574068165&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true", media_type: "podcast")
 step3.lesson = lesson1
 step3.save
 
-step4 = Step.new(number: 4, title:"Exemple", url:"https://www.franceculture.fr/player/export-reecouter?content=59e36844-5d4a-11e5-a571-005056a87c89", media_type:"podcast")
+step4 = Step.new(number: 4, title:"Différencier stress et burnout", url:"https://www.youtube.com/embed/KYXK1UsuK9I", media_type:"video")
 step4.lesson = lesson1
 step4.save
 
-step1 = Step.new(title:"lesson2 step 1", number: 1)
+#-------------------------------
+
+step1 = Step.new(number:1, title: "Les facteurs de risque", url:"https://click.edenred.fr/edenredv2/inline-images/edenred-prevenir_les_mauxtravail-0418-2.jpg", media_type:"text")
 step1.lesson = lesson2
 step1.save
 
-step1 = Step.new(title: "Définir le stress", number: 1, text_content: " Le stress est connu depuis longtemps et a une longue histoire.
+step2 = Step.new(title: "Identification des différents symptomes", number: 2, url:"https://player.ausha.co/index.html?podcastId=odNJDcvDX8Aa&v=3&playerId=ausha-firL", media_type:"podcast")
+step2.lesson = lesson2
+step2.save
 
-Le stress a été découvert par un physiologiste anglosaxon, Henry Seyle.
+step3 = Step.new(number: 3, title: "Reportage sur le burnout", url: "https://www.youtube.com/embed/VWC6Y1gimDI", media_type: "video")
+step3.lesson = lesson2
+step3.save
 
-Il a décrit les réponses de l’organisme produites par des agressions physiques ou chimiques. Il a d’abord donné le nom de « syndrome général d’adaptation » à ces réactions. C’est ainsi qu’est né le stress.
+step4 = Step.new(number: 4, title:"Êtes-vous sujet au burnout ?", url:"https://www.apprivoisersonstress.ca/outils/autoevaluation-epuisement-professionnel-burnout/", media_type:"text")
+step4.lesson = lesson2
+step4.save
 
-Le stress a été décrit comme une réponse normale d’adaptation de votre organisme aux contraintes et agressions que vous subissez chaque jour dans le cadre de votre vie quotidienne. Cette adaptation concerne vos systèmes physiologiques de régulation et de défense, mais aussi des réactions psychologiques et comportementales.
+#-------------------------------
 
-C'est un phénomène essentiel à notre survie, très complexe, nécessitant la mis en oeuvre de nombreux systèmes physiologiques de l'organisme qu'ils soint physiques ou psuchologiques, cariaques ou endocriniens, neurologiques ou psychologiques. Cette compléxité du stress est probablement à l'origne de sa mauvaise compréhension, elle-même source de beaucoup d'erreurs dans la signification même de ce mot.
-
-Le stress a été décrit comme une réponse normale d’adaptation de votre organisme aux contraintes et agressions que vous subissez chaque jour dans le cadre de votre vie quotidienne. Cette adaptation concerne vos systèmes physiologiques de régulation et de défense, mais aussi des réactions psychologiques et comportementales.
-
-Le stress correspond aussi aux composantes de l’agression qui va enclencher cette réaction d’adaptation. Le stress est alors un agent stresseur qui peut survenir de manière aigue ou chronique, évènementielle, conjoncturelle ou structurelle, et qui peut selon les cas concerner votre vie personnelle ou votre vie professionnelle. On dit alors : 'je suis stressé'.
-
-Le mot stress est une manière de décrire toute situation que nous considérons comme dangereuse pour notre équilibre personnel, difficile à éviter voire insupportable. \n\n -Le Figaro")
-
+step1 = Step.new(title: "Définir le stress", number: 1, url:"https://www.franceculture.fr/player/export-reecouter?content=59e36844-5d4a-11e5-a571-005056a87c89", media_type:"podcast")
 step1.lesson = lesson3
 step1.save
 
-step2 = Step.new(number: 2, title: "Surmenage, stress et burnout", url: "https://www.franceculture.fr/player/export-reecouter?content=f218409a-49ec-4c27-8f95-a005a64bf3da", media_type: "podcast")
+step2 = Step.new(number: 3, title: "Sophrologie anti-stress", url: "https://www.youtube.com/embed/CK6OMG_5LMQ", media_type: "video" )
 step2.lesson = lesson3
 step2.save
 
-step3 = Step.new(number: 3, title: "Sophrologie anti-stress", url: "https://www.youtube.com/embed/CK6OMG_5LMQ", media_type: "video" )
+step3 = Step.new(number: 2, title: "Surmenage, stress et burnout", url: "https://www.franceculture.fr/player/export-reecouter?content=f218409a-49ec-4c27-8f95-a005a64bf3da", media_type: "podcast")
 step3.lesson = lesson3
 step3.save
 
-step4 = Step.new(number:4, title: "Lutter contre le stress au travail", text_content: "Trucs pour mieux gérer son stress
-En parler
-
-Quand on constate qu’on est affecté par un niveau de stress anormalement élevé, il est important de ne pas garder ses préoccupations pour soi et de trouver quelqu’un à qui en parler. Que ce soit un ami ou un membre de la famille, le simple fait d’en parler à un proche et de “vider son sac” peut aider à relâcher la tension et voir les choses sous un autre angle.
-Ne pas négliger son corps
-
-Bien manger, faire de l’exercice et bien dormir; on sous-estime souvent le rôle de ces trois éléments pour notre bien-être, dont notre niveau de stress. Après tout, le stress est une réaction physique et hormonale, alors c’est tout à fait sensé de commencer par prendre soin de son corps pour en limiter les effets! Voilà quelques recommandations:
-
-    S’alimenter le plus souvent possible d’aliments non transformés: de fruits, légumes, légumineuses, poissons, volailles et grains entiers ainsi que d’aliments contenant des acides gras oméga-3 (présents entre autres dans le saumon, les graines de chanvre, de chia et de lin).
-    Être actif chaque jour, au moins 30 minutes. En plus de réduire significativement la haute pression et de nous rendre plus résistants au stress, l’activité physique stimule la dopamine, la sérotonine et les endorphines, neurotransmetteurs favorisant la sensation de bien-être et la bonne humeur. Des activités comme la course et le jogging peuvent être particulièrement bénéfiques contre le stress.
-    S’assurer de dormir de 7 à 9 h par nuit et favoriser un sommeil de qualité. Négliger son sommeil rend plus vulnérable au stress, et puisque le stress peut mener à l’insomnie, le manque de sommeil peut facilement devenir un cercle vicieux. Le premier truc à appliquer pour aider à réguler le sommeil est d’établir une routine pour réduire notre exposition à la lumière bleue en soirée et se relaxer avant d’aller dormir, ainsi que se coucher et se lever à la même heure chaque jour. Pour plus de détails sur les façons de favoriser un sommeil de qualité, voir aussi cet article.
-
-Planifier et s’organiser
-
-Pour s’éviter du stress inutile, planifier son travail selon les priorités auxquelles on doit accorder notre temps est primordial. Chaque matin, ou un peu avant la fin de chaque journée de travail, prends un petit 15 minutes pour revoir le travail qui doit être fait et planifier la journée suivante. De cette façon, tu seras plus en contrôle et moins vulnérable au stress.
-
-
-Toutefois, travailler 8 heures par jour sans arrêt pour essayer d’accomplir le plus de choses possible n’est pas recommandé. Les pauses sont primordiales pour recharger nos batteries, libérer le stress et travailler de façon optimale. Il serait donc sage de leur réserver du temps dans nos planifications quotidiennes et de profiter de ces moments pour prendre une petite marche si possible, s’étirer et faire quelques exercices de respiration.
-Éliminer les habitudes qui te causent du stress inutilement
-
-Il arrive qu’on soit notre propre source de stress. Par exemple, quand on accorde une trop grande importance à l’opinion d’autrui, on perd le contrôle sur la satisfaction qu’on éprouve envers notre propre travail. C’est une situation stressante qui peut mener à d’autres habitudes provoquant du stress inutile comme le perfectionnisme, la procrastination et le pessimisme.
-
- Voir aussi: Bienvenue aux perfectionnistes anonymes
-Relaxer et respirer
-
-L’une des meilleures façons pour relâcher le stress instantanément et le combattre à long terme est d’apprendre des techniques de relaxation et de respiration. Ça peut être aussi simple que de prendre de grandes respirations par le nez et les relâcher lentement par la bouche chaque fois qu’on se sent stressé pendant la journée. Voilà d’autres méthodes qui valent également la peine d’être essayées:
-*Ces techniques peuvent être accompagnées d’aromathérapie ou de musique, peuvent se pratiquer pratiquement n’importe où et n’ont pas de durée déterminée.
-
-    Respiration profonde: Il suffit de s’asseoir en gardant le dos bien droit, (ou de s’étendre sur le dos) de poser une main sur l’abdomen et l’autre sur la poitrine. Il faut ensuite prendre une grande inspiration par le nez en gonflant son abdomen autant que possible, et non sa cage thoracique. La main sur la poitrine ne devrait pratiquement pas bouger. Ensuite, il faut expirer lentement autant d’air que possible par la bouche en contractant les muscles abdominaux. Encore une fois, c’est la main sur l’abdomen qui devrait bouger et celle sur la poitrine devrait demeurer pratiquement immobile.
-    Respiration fraîche: cette technique de respiration est particulièrement efficace dans les moments où on se sent frustré ou en colère. Il suffit de prendre une grande respiration par la bouche en réduisant l’entrée d’air, comme si on respirait à travers une paille, puis d’expirer normalement par le nez. Lorsque bien effectuée, cette respiration donne une sensation de fraîcheur sur le dessus de la langue.
-    Respiration du dragon: cette technique de respiration est recommandée dans les moments de stress intense et d’anxiété. Elle consiste à prendre une grande respiration par les narines et à expulser l’air lentement par la bouche comme si on soufflait dans une paille. En expirant, on peut  imaginer que le souffle qu’on rejette est une épaisse fumée grise dans laquelle se trouvent nos craintes et énergies négatives.
-    Méditation: Méditer régulièrement, même si ce n’est que pendant quelques minutes, permet d’exercer un meilleur contrôle sur nos pensées et limiter le stress qu’elles nous procurent.
-    Activité relaxante: trouver une activité relaxante qu’on apprécie et qu’on peut pratiquer fréquemment permet d’évacuer le stress qui nous habite. Que ce soit la pratique du yoga, le jardinage, ou même prendre un bain chaud en écoutant de la musique, toutes les façons sont bonnes, tant qu’elles ont un effet relaxant et qu’elles conviennent à notre mode de vie.
-")
+step4 = Step.new(number:4, title: "Maitriser son stress", url:"https://biendanstaboite.fr/7-conseils-pour-gerer-son-stress-quand-on-est-entrepreneur/", media_type:"text")
 step4.lesson = lesson3
 step4.save
 
+#-------------------------------
 
-# Manque step pour lesson 4
+step1 = Step.new(title: "Le burnout des entrepreneurs", number: 1, url:"https://www.maddyness.com/2020/01/24/burnout-difficile-realite-fondateur/", media_type: "text")
+step1.lesson = lesson4
+step1.save
 
+step2 = Step.new(number: 2, title: "Ne pas s'enfermer, communiquer !", url: "https://business.lesechos.fr/entrepreneurs/aides-reseaux/dossiers/Entrepreneurs-votre-sante-est-precieuse/burn-out-de-l-entrepreneur-ne-vous-enfermez-pas-et-parlez-de-vos-difficultes-206187.php", media_type: "text")
+step2.lesson = lesson4
+step2.save
+
+step3 = Step.new(number: 3, title: "Témoignage d'un entrepreneur", url: "https://www.youtube.com/embed/EfTaZp2vOSo", media_type: "video" )
+step3.lesson = lesson4
+step3.save
+
+step4 = Step.new(number:4, title: "Comment éviter d'être à bout ?", url: "https://widget.spreaker.com/player?episode_id=15537631&theme=light&autoplay=false&playlist=false&cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2F29b0a476ca366cb415c0cf5d54ea06e3.jpg", media_type: "podcast")
+step4.lesson = lesson4
+step4.save
+
+#-------------------------------
+
+step1 = Step.new(title: "Du burnout à la performance", number: 1, url:"https://www.youtube.com/embed/o5fC4EzPjD0", media_type:"video")
+step1.lesson = lesson5
+step1.save
+
+step2 = Step.new(number: 2, title: "Apprendre à faire différemment", url: "https://www.youtube.com/embed/Q796IzWYBis", media_type: "video")
+step2.lesson = lesson5
+step2.save
+
+step3 = Step.new(number: 3, title: "Témoignages", url: "https://www.helloworkplace.fr/burn-out-et-apres-ils-racontent-leur-retour-au-travail/", media_type: "text" )
+step3.lesson = lesson5
+step3.save
+
+step4 = Step.new(number:4, title: "Retrouver du sens après un burnout", url:"https://player.ausha.co/index.html?podcastId=owgpVCLj4RkA&v=3&playerId=ausha-n8lH", media_type:"podcast")
+step4.lesson = lesson5
+step4.save
 
 #relation entre momo et program 11
 
@@ -244,29 +204,133 @@ up2.user = momo
 up2.program = prog11
 up2.save
 
-up2.last_lesson_id = lesson3.id
+up2.last_lesson_id = lesson5.id
 up2.last_step_id = step2.id
 up2.save
 
 #création d'un final test pour program 11
 
-ft = FinalTest.new(description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-                    objectifs: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+ft = FinalTest.new(description: "Maintenant que vous en savez beaucoup plus sur le burnout, vous êtes en mesure d'entreprendre votre projet tout en prenant soin de vous et de votre santé. Pour finaliser votre apprentissage, nous vous proposons une étude de cas. Projetez-vous à 2 ans après votre création d'entreprise. Votre activité se porte bien, vous êtes en phase de croissance, et vous recrutez de façon intensive. Votre vie ne se résume presque plus qu'à votre travail et vous commencez à sentir une intense fatigue et des effets négatifs sur votre vie personnelle. Comment devriez-vous réagir face à cette situation ?",
+                    objectifs: "Listez les potentielles dérives de cette situation d'un point de vue personnel, et proposez des actions vous permettant de vivre cette expérience positive de façon sereine et durable.")
 ft.program = prog11
 ft.save
 
 
 #création d'un quiz pour lesson 3
-
+quiz = Quiz.new
+quiz.lesson = lesson5
+quiz.save
 #création des questions pour le quiz
 
-#question1 = Question.new(description: "texte de la question", number: 1)
-#question1.quiz = quiz1
-#question1.save
+question1 = Question.new(description: "Qu'est-ce que le burnout ?", number: 1)
+question1.quiz = quiz
+question1.save
+
+question2 = Question.new(description: "Quels symptômes sont directement liés au burnout ?", number: 2)
+question2.quiz = quiz
+question2.save
+
+question3 = Question.new(description: "Quelle situation est la plus critique ?", number: 3)
+question3.quiz = quiz
+question3.save
+
+question4 = Question.new(description: "Comment éviter le burnout en tant qu'entrepreneur ?", number: 4)
+question4.quiz = quiz
+question4.save
+
+question5 = Question.new(description: "Comment rebondir après un burnout ?", number: 5)
+question5.quiz = quiz
+question5.save
 
 #création des réponses pour les questions
 
-#reponse1 = Answer.new(, correct: true)
-#reponse1.question = question1
-#reponse1.save
+answer1 = Answer.new(content: "Un problème de stress", correct: false)
+answer1.question = question1
+answer1.save
+
+answer2 = Answer.new(content: "Une dépression", correct: false)
+answer2.question = question1
+answer2.save
+
+answer3 = Answer.new(content: "Un épuisement professionnel", correct: true)
+answer3.question = question1
+answer3.save
+
+answer4 = Answer.new(content: "Une excuse pour arrêter de travailler", correct: false)
+answer4.question = question1
+answer4.save
+
+#-------------------------------
+
+answer1 = Answer.new(content: "Isolement, anxiété, fatigue", correct: true)
+answer1.question = question2
+answer1.save
+
+answer2 = Answer.new(content: "Stress, phobie de l'échec", correct: false)
+answer2.question = question2
+answer2.save
+
+answer3 = Answer.new(content: "Paranoïa, agoraphobie", correct: false)
+answer3.question = question2
+answer3.save
+
+answer4 = Answer.new(content: "Maux de tête", correct: false)
+answer4.question = question2
+answer4.save
+
+#-------------------------------
+
+answer1 = Answer.new(content: "Je travaille 50 heures par semaine", correct: false)
+answer1.question = question3
+answer1.save
+
+answer2 = Answer.new(content: "Je rêve de mon travail toutes les nuits", correct: false)
+answer2.question = question3
+answer2.save
+
+answer3 = Answer.new(content: "Je n'arrive plus à me lever le matin", correct: true)
+answer3.question = question3
+answer3.save
+
+answer4 = Answer.new(content: "Faire les seeds de cette app", correct: false)
+answer4.question = question3
+answer4.save
+
+#-------------------------------
+
+answer1 = Answer.new(content: "En déléguant toutes les tâches", correct: false)
+answer1.question = question4
+answer1.save
+
+answer2 = Answer.new(content: "En dédiant sa vie à son projet", correct: false)
+answer2.question = question4
+answer2.save
+
+answer3 = Answer.new(content: "En abandonnant après l'échec", correct: false)
+answer3.question = question4
+answer3.save
+
+answer4 = Answer.new(content: "En privilégiant le plaisir à la performance", correct: true)
+answer4.question = question4
+answer4.save
+
+#-------------------------------
+
+answer1 = Answer.new(content: "En se focalisant sur ses aspirations personnelles", correct: true)
+answer1.question = question5
+answer1.save
+
+answer2 = Answer.new(content: "En se lançant immédiatement dans un nouveau projet", correct: false)
+answer2.question = question5
+answer2.save
+
+answer3 = Answer.new(content: "En abandonnant l'idée d'entreprendre", correct: false)
+answer3.question = question5
+answer3.save
+
+answer4 = Answer.new(content: "En partant en vacances", correct: false)
+answer4.question = question5
+answer4.save
+
+#-------------------------------
 

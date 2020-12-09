@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_142124) do
+ActiveRecord::Schema.define(version: 2020_12_09_081824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,10 +46,12 @@ ActiveRecord::Schema.define(version: 2020_12_08_142124) do
   end
 
   create_table "chatrooms", force: :cascade do |t|
-    t.integer "user1_id"
-    t.integer "user2_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "host_id"
+    t.bigint "guest_id"
+    t.index ["guest_id"], name: "index_chatrooms_on_guest_id"
+    t.index ["host_id"], name: "index_chatrooms_on_host_id"
   end
 
   create_table "final_test_answers", force: :cascade do |t|
@@ -162,6 +164,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_142124) do
     t.string "username"
     t.integer "level"
     t.integer "xp"
+    t.integer "count_days"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -181,6 +184,8 @@ ActiveRecord::Schema.define(version: 2020_12_08_142124) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "answers", "questions"
+  add_foreign_key "chatrooms", "users", column: "guest_id"
+  add_foreign_key "chatrooms", "users", column: "host_id"
   add_foreign_key "final_test_answers", "final_tests"
   add_foreign_key "final_test_answers", "users"
   add_foreign_key "final_tests", "programs"

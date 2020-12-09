@@ -1,2 +1,14 @@
-<h1>Chatrooms#show</h1>
-<p>Find me in app/views/chatrooms/show.html.erb</p>
+<h1>Chatroom #<%= @chatroom.id %></h1>
+<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+  <% @chatroom.messages.each do |message| %>
+    <%= render "messages/message", message: message %>
+  <% end %>
+</div>
+
+
+<div class="container-form">
+  <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+    <%= f.input :content, label: false, placeholder: "Entre ton message" %>
+    <%= f.button :submit, "Envoyer", class: "btn_square" %>
+  <% end %>
+</div>
