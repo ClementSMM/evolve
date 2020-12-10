@@ -13,7 +13,6 @@
   <div class="question-block">
     <div class="question-grid">
       <% @answers.each_with_index do |answer, index| %>
-
       <% next_id = @question.quiz.question_ids.index(@question.id)+1 %>
 
         <% if answer.correct %>

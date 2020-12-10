@@ -16,7 +16,9 @@ class QuizzScoresController < ApplicationController
   def show
     @quizz_score = QuizzScore.find(params[:id])
     @program = @quizz_score.quiz.lesson.program
+    @final_test = @program.final_test
     @quiz = @quizz_score.quiz
+
     if @quizz_score.number_correct_answer < 5
       @success = false
     else
@@ -33,6 +35,14 @@ class QuizzScoresController < ApplicationController
       else
         redirect_to question_path(@quizz_score.quiz.question_ids[params[:index_question].to_i + 1])
       end
+    end
+  end
+
+  def reset_score
+    @quizz_score = QuizzScore.find(params[:id])
+    @quizz_score.number_correct_answer = 0
+    if @quizz_score.save
+      redirect_to question_path(@quizz_score.quiz.questions.first)
     end
   end
 

@@ -6,7 +6,10 @@ class User < ApplicationRecord
   has_many :users_programs, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :final_test_answers, dependent: :destroy
+  has_many :quizz_scores, dependent: :destroy
   has_one_attached :photo
+  validates :username, presence: true
 
   def name
     self.username + " - lev " + self.level.to_s
@@ -26,17 +29,12 @@ class User < ApplicationRecord
     @nb_done.count
   end
 
-  def consecutive_days
-    if (self.last_sign_in_at).to_i == (self.current_sign_in_at).to_i - 1
-      count_days += 1
-    else
-      count_days = 0
-    end
-    return count_days
+  def consecutive_days?
+    (Date.today - last_sign_in_at.to_date).to_i == (days_streak)
   end
-
-  has_many :final_test_answers, dependent: :destroy
-  has_many :quizz_scores, dependent: :destroy
+  def more?
+    (Date.today - last_sign_in_at.to_date).to_i < (days_streak)
+  end
 
   def add_xp(number)
     xp += number
