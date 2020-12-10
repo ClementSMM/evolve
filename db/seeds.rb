@@ -438,3 +438,13 @@ step1.lesson = lesson1
 step1.save
 
 puts "5 leçons additionnelles créées"
+
+
+User.create!(username: "emmy", email: "emmy@email.com", password: "azerty", level: 7, xp: 200, last_sign_in_at: (Date.today - 12), days_streak: 12)
+User.create!(username: "andrew", email: "andrew@email.com", password: "azerty", level: 2, xp: 300, last_sign_in_at: (Date.today - 2), days_streak: 2)
+User.create!(username: "lisa", email: "lisa@email.com", password: "azerty", level: 6, xp: 100, last_sign_in_at: Date.today, days_streak: 6)
+User.create!(username: "val", email: "valentine@email.com", password: "azerty", level: 1, xp: 200, last_sign_in_at: (Date.today - 1), days_streak: 1)
+User.create!(username: "louis", email: "louis@email.com", password: "azerty", level: 4, xp: 800, last_sign_in_at: (Date.today - 2), days_streak: 2)
+User.create!(username: "elody", email: "elody@email.com", password: "azerty", level: 5, xp: 100, last_sign_in_at: Date.today, days_streak: 0)
+
+puts "6 users créés"
