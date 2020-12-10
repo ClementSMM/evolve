@@ -29,6 +29,10 @@ Rails.application.routes.draw do
   resources :quizzes, only: [:show] do
     resources :quizz_scores, only: [:create]
   end
-  resources :quizz_scores, only: [:show, :update]
+  resources :quizz_scores, only: [:show, :update] do
+    member do
+      patch :reset_score
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -7,6 +7,10 @@
     <p>Félicitations, vous avez débloqué la leçon suivante !</p>
   </div>
   <div class="btn-div">
+    <% if @quiz == @program.lessons.last.quiz %>
+      <%= link_to "Passer au test final", final_test_path(@final_test), class: "btn_round4"  %>
+    <% else %>
     <%= link_to "Leçons", program_path(@program), class: "btn_round4"  %>
+    <% end %>
   </div>
 </div>

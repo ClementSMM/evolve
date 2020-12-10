@@ -6,8 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Chatroom.destroy_all
+User.destroy_all
 UsersProgram.destroy_all
 Program.destroy_all
+
+User.create!(username: "marg", email: "marg@email.com", password: "azerty", level: 1, xp: 200, last_sign_in_at: (Date.today - 1), days_streak: 1)
+User.create!(username: "momo", email: "momo@email.com", password: "azerty", level: 3, xp: 970, last_sign_in_at: (Date.today - 2), days_streak: 2)
+User.create!(username: "clem", email: "clem@email.com", password: "azerty", level: 5, xp: 100, last_sign_in_at: Date.today, days_streak: 0)
 
 #récupérer les users présents
 
@@ -53,12 +59,14 @@ end
 up = UsersProgram.new(status: "in progress")
 up.user = momo
 up.program = prog3
+up.completion = 50
 up.save
 
 
 up = UsersProgram.new(status: "in progress")
 up.user = momo
 up.program = prog4
+up.completion = 30
 up.save
 
 up = UsersProgram.new(status: "done")
@@ -81,6 +89,7 @@ up.save
 
 up = UsersProgram.new(status: "in progress")
 up.user = clem
+up.completion = 70
 up.program = prog7
 up.save
 
@@ -213,6 +222,7 @@ puts "steps des lessons créés"
 up2 = UsersProgram.new(status: "in progress")
 up2.user = momo
 up2.program = prog11
+up2.completion = 80
 up2.save
 
 up2.last_lesson_id = lesson5.id
