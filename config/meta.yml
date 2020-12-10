@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "eVolve"
+meta_title: "eVolve - Learn, Create, Success"
+meta_description: "Avec eVolve, apprenez et entreprenez grâce à un programme de formations divertissant et adapté à vos besoins."
+meta_image: "evolve-og.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
