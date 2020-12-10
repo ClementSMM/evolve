@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :final_test_answers, dependent: :destroy
   has_many :quizz_scores, dependent: :destroy
-
   has_one_attached :photo
+  validates :username, presence: true
 
   def name
     self.username + " - lev " + self.level.to_s

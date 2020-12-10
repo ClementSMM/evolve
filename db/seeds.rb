@@ -59,12 +59,14 @@ end
 up = UsersProgram.new(status: "in progress")
 up.user = momo
 up.program = prog3
+up.completion = 50
 up.save
 
 
 up = UsersProgram.new(status: "in progress")
 up.user = momo
 up.program = prog4
+up.completion = 30
 up.save
 
 up = UsersProgram.new(status: "done")
@@ -87,6 +89,7 @@ up.save
 
 up = UsersProgram.new(status: "in progress")
 up.user = clem
+up.completion = 70
 up.program = prog7
 up.save
 
@@ -219,6 +222,7 @@ puts "steps des lessons créés"
 up2 = UsersProgram.new(status: "in progress")
 up2.user = momo
 up2.program = prog11
+up2.completion = 80
 up2.save
 
 up2.last_lesson_id = lesson5.id
