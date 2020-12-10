@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_12_09_172126) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -164,6 +163,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_172126) do
     t.string "username"
     t.integer "level"
     t.integer "xp"
+    t.integer "days_counter"
     t.integer "days_streak"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
