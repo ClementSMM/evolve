@@ -41,7 +41,6 @@ class QuizzScoresController < ApplicationController
   def reset_score
     @quizz_score = QuizzScore.find(params[:id])
     @quizz_score.number_correct_answer = 0
-    raise
     if @quizz_score.save
       redirect_to question_path(@quizz_score.quiz.questions.first)
     end
