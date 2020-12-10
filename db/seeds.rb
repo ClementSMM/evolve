@@ -123,6 +123,8 @@ lesson5 = Lesson.new(title: "La vie après le burnout", description: "Apprendre 
 lesson5.program = prog11
 lesson5.save
 
+
+
 puts "5 lessons créées"
 
 #création des steps des lessons
@@ -389,3 +391,29 @@ step1.lesson = lesson1
 step1.save
 
 puts "1 step créée"
+
+lesson1 = Lesson.new(title: "Notions de bilan", description: "Comprendre ce qu'est l'actif et le passif du bilan et connaitre les principaux postes.", number: 1)
+lesson1.program = prog8
+lesson1.save
+
+lesson2 = Lesson.new(title: "Enregistrer les achats", description: "Enregistrer comptablement les factures d'achat.", number: 2)
+lesson2.program = prog8
+lesson2.save
+
+lesson3 = Lesson.new(title: "Enregistrer les ventes", description: "Enregistrer les fcatures de vente, en respectant le principe de la partie double", number: 3)
+lesson3.program = prog8
+lesson3.save
+
+lesson4 = Lesson.new(title: "La TVA", description: "Introduire la TVA dans les factures", number: 4)
+lesson4.program = prog8
+lesson4.save
+
+lesson5 = Lesson.new(title: "Calcul du résultat", description: "Calculer le résultat à partir des opérations de vente et d'achat", number: 5)
+lesson5.program = prog8
+lesson5.save
+
+step1 = Step.new(title: "Bienvenue en Compta", number: 1, url:"https://www.youtube.com/embed/mG7O1WKxrdg", media_type:"video")
+step1.lesson = lesson1
+step1.save
+
+puts "5 leçons additionnelles créées"
