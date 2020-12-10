@@ -390,7 +390,28 @@ step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https:/
 step1.lesson = lesson1
 step1.save
 
-puts "1 step créée"
+step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https://www.youtube.com/embed/Irt6p39rC8Q", media_type:"video")
+step1.lesson = lesson2
+step1.save
+
+step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https://www.youtube.com/embed/Irt6p39rC8Q", media_type:"video")
+step1.lesson = lesson3
+step1.save
+
+step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https://www.youtube.com/embed/Irt6p39rC8Q", media_type:"video")
+step1.lesson = lesson4
+step1.save
+
+step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https://www.youtube.com/embed/Irt6p39rC8Q", media_type:"video")
+step1.lesson = lesson5
+step1.save
+
+up = UsersProgram.where(user: momo, program: prog1).first
+up.last_lesson_id = lesson5.id
+up.last_step_id = step1.id
+up.save
+
+puts "5 steps créés"
 
 lesson1 = Lesson.new(title: "Notions de bilan", description: "Comprendre ce qu'est l'actif et le passif du bilan et connaitre les principaux postes.", number: 1)
 lesson1.program = prog8
