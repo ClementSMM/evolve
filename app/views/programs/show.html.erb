@@ -14,7 +14,9 @@
           </div>
           <div class="card-stats-program">
             <h4><br>Test final</h4>
-            <p>Vérouillé</p>
+            <% if @up.present? %>
+            <p><%= @up.final_test_status.capitalize %> </p>
+            <% end %>
           </div>
         </div>
       </div>

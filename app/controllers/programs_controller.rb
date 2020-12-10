@@ -9,6 +9,7 @@ class ProgramsController < ApplicationController
 
   def show
     @program = Program.find(params[:id])
+    @up = UsersProgram.where(user: current_user, program: @program).first
     @lessons = @program.lessons
     @reviews = @program.reviews.last(3)
     if current_user.consecutive_days?
