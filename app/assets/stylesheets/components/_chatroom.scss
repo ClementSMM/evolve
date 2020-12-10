@@ -13,22 +13,23 @@
   color: white;
   width: 70%;
     h2 {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid $gray-200;
-    margin-bottom: 20px;
+    padding: 1rem 1rem;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #6781F7;
+    font-size: 30px;
+    font-weight: 800;
   }
 }
 
 #messages {
-  padding: 0 1rem;
-  padding-top: 1rem;
+  margin-top: 50px;
   overflow-y: scroll;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 475px);
 }
 
 #new_message {
   padding: 1rem;
-  border-top: 1px solid $gray-200;
 
   .form-group {
     margin-bottom: 0;

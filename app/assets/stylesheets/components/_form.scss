@@ -21,6 +21,29 @@
   }
 }
 
+.container-form2 {
+  background-color: #243046;
+  padding : 50px;
+  width: 650px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  position:relative;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-top: 0px;
+  font-weight: 600;
+  font-size: 14px;
+  h2 {
+    color: #6781F7;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+  input, textarea {
+    border-radius: 20px;
+  }
+}
+
 body {
   background-color: #EBEDF3;
 }
@@ -34,19 +57,18 @@ body {
 }
 
 .conversation-form {
-  width: 80%;
+  width: 85%;
   color: white;
   text-decoration: none;
   position:relative;
   font-weight: 600;
   font-size: 14px;
   h2 {
-    color: #6781F7;
-    font-weight: 800;
+    color: white;
+    font-weight: 700;
     margin-bottom: 30px;
   }
   input {
-    border-radius: 20px;
   }
 }
 
