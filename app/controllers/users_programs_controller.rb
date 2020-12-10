@@ -20,6 +20,7 @@ class UsersProgramsController < ApplicationController
       up.update(last_step_id: step.id, last_lesson_id: lesson.id)
       up.update_completion
       current_user.add_xp(10)
+      current_user.save
       redirect_to step_path(step) if up.save
     else
       redirect_to step_path(step)

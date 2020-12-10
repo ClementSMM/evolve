@@ -37,7 +37,7 @@ class User < ApplicationRecord
   end
 
   def add_xp(number)
-    xp += number
+    self.xp += number
     if xp >= 1000
       xp -= 1000
       level += 1
