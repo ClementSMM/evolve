@@ -1,3 +1,4 @@
+
 <div class="big-div">
   <div class="big-div-header">
     <span class="big-title"><%= @step.title %> | </span> <span class="big-subtitle">Étape <%= @step.number %></span>
@@ -36,8 +37,8 @@
     <% end %>
   <% end %>
 </div>
-    <div class="background-bar"></div>
-
+    <div class="background-bar">
+    </div>
   <% if @step.number == 4 %>
   <div class="d-flex justify-content-end btn-step-position">
   <%= link_to "Quiz !", quiz_quizz_scores_path(@quiz), method: :post, class: "btn_round2" %>
