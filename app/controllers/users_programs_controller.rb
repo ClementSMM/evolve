@@ -4,6 +4,10 @@ class UsersProgramsController < ApplicationController
     up.user = current_user
     program = Program.find(params[:program_id])
     up.program = program
+    lesson1 = program.lessons.first
+    up.last_lesson_id = lesson1.id if lesson1.present?
+    step = program.lessons.first.steps.first
+    up.last_step_id = step.id if step.present?
     if up.save
       redirect_to program_path(program)
     end
