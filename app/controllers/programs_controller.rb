@@ -12,6 +12,12 @@ class ProgramsController < ApplicationController
     @up = UsersProgram.where(user: current_user, program: @program).first
     @lessons = @program.lessons
     @reviews = @program.reviews.last(3)
+    if current_user.consecutive_days?
+      current_user.update(days_streak: current_user.days_streak + 1)
+    elsif current_user.more?
+    else
+      current_user.update(days_streak: 0, last_sign_in_at: Date.today)
+    end
   end
 
   private
@@ -21,7 +27,7 @@ class ProgramsController < ApplicationController
     programs.each do |program|
       if program.users.include?(current_user)
         usersprogram = ups.find { |up| up.program_id == program.id }
-       @programs_up << [program, usersprogram]
+        @programs_up << [program, usersprogram]
       else
         @programs_up << [program, nil]
       end
