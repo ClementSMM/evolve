@@ -6,8 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Chatroom.destroy_all
+User.destroy_all
 UsersProgram.destroy_all
 Program.destroy_all
+
+User.create!(username: "marg", email: "marg@email.com", password: "azerty", level: 1, xp: 200, last_sign_in_at: (Date.today - 1), days_streak: 1)
+User.create!(username: "momo", email: "momo@email.com", password: "azerty", level: 3, xp: 970, last_sign_in_at: (Date.today - 2), days_streak: 2)
+User.create!(username: "clem", email: "clem@email.com", password: "azerty", level: 5, xp: 100, last_sign_in_at: Date.today, days_streak: 0)
 
 #récupérer les users présents
 
