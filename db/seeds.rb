@@ -24,7 +24,7 @@ users = [marg, momo, clem]
 
 #création des programs
 
-prog1 = Program.create!(title: "Design Thinking", description: "Penser oui mais autrement.", unlock_program: 1)
+prog1 = Program.create!(title: "Design Thinking", description: "Vous voulez résoudre des problèmes pratiques et théoriques de façon créative ? Lancez-vous dans le programme « Design Thinking ».", unlock_program: 1)
 prog2 = Program.create!(title: "Protection de l'innovation" , description: "Vous avez peur que vos idées soient reprises par d'autre? Apprenez ici comment les protéger.", unlock_program: 1)
 prog3 = Program.create!(title: "Réaliser un Business Plan", description: "Le Business Plan est une étape importante de la construction d'un projet d'entreprise. Construisez le pas à pas grace à ce programme.", unlock_program: 1)
 prog4 = Program.create!(title: "Analyse des coûts", description: "Votre projet est-il viable financièrement? Analysez vos coûts et vos gains potentiels et adaptez votre projet à vos containtes budgétaires", unlock_program: 2)
@@ -364,6 +364,33 @@ answer4.save
 
 puts "réponses du quiz créées"
 
+lesson1 = Lesson.new(title: "Pensez autrement", description: "Découvrir les cinq étapes du Design Thinking.", number: 1)
+lesson1.program = prog1
+lesson1.save
+
+lesson2 = Lesson.new(title: "À votre place", description: "Reconnaître l’importance de l’empathie dans le processus de Design Thinking." , number: 2)
+lesson2.program = prog1
+lesson2.save
+
+lesson3 = Lesson.new(title: "Découverte de l’année", description: "Utiliser des techniques de création pour générer un maximum de solutions.", number: 3)
+lesson3.program = prog1
+lesson3.save
+
+lesson4 = Lesson.new(title: "Eurêka !", description: "Concevoir un prototype pour tester une idée.", number: 4)
+lesson4.program = prog1
+lesson4.save
+
+lesson5 = Lesson.new(title: "La voie de la réussite", description: "Se donner les moyens nécessaires pour réussir le processus de Design Thinking.", number: 5)
+lesson5.program = prog1
+lesson5.save
+
+puts "5 lessons créées"
+
+step1 = Step.new(number:1, title: "Les étapes du Design Thinking", url:"https://www.youtube.com/embed/Irt6p39rC8Q", media_type:"video")
+step1.lesson = lesson1
+step1.save
+
+puts "1 step créée"
 
 lesson1 = Lesson.new(title: "Notions de bilan", description: "Comprendre ce qu'est l'actif et le passif du bilan et connaitre les principaux postes.", number: 1)
 lesson1.program = prog8
@@ -390,4 +417,3 @@ step1.lesson = lesson1
 step1.save
 
 puts "5 leçons additionnelles créées"
-
