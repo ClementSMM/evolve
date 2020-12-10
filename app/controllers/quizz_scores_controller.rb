@@ -23,6 +23,8 @@ class QuizzScoresController < ApplicationController
       @success = false
     else
       @success = true
+      current_user.add_xp(100)
+      current_user.save
     end
   end
 
