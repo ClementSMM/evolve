@@ -7,6 +7,6 @@
     <p>Navré, tu es invité à recommencer !</p>
   </div>
   <div class="btn-div">
-    <%= link_to "Recommencer", question_path(@quiz.questions.first), class: "btn_round4"  %>
+    <%= link_to "Recommencer", reset_score_quizz_score_path(@quizz_score), method: :patch, class: "btn_round4"  %>
   </div>
 </div>
