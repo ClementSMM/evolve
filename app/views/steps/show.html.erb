@@ -42,5 +42,8 @@
   <% if @step.number == 4 %>
   <div class="d-flex justify-content-end btn-step-position">
   <%= link_to "Quiz !", quiz_quizz_scores_path(@quiz), method: :post, class: "btn_round2" %>
+  <% else %>
+  <div class="d-flex justify-content-end btn-step-position">
+  <%= link_to "Leçons", program_path(@program), class: "btn_round2" %>
   <% end %>
   </div>
