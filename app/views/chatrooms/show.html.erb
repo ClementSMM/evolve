@@ -1,9 +1,9 @@
 <div class="chatroom">
   <h2>
   <% if @chatroom.guest == current_user %>
-    <%= @chatroom.host.username%> <% "level " + @chatroom.host.level.to_s %>
+    <%= @chatroom.host.username%> <% " | Niveau " + @chatroom.host.level.to_s %>
   <% else %>
-    <%= @chatroom.guest.username + " level " + @chatroom.guest.level.to_s %>
+    <%= @chatroom.guest.username + " | Niveau " + @chatroom.guest.level.to_s %>
   <% end %>
 
   </h2>
@@ -14,7 +14,7 @@
   </div>
 
 
-  <div class="container-form">
+  <div class="container-form2">
     <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
       <%= f.input :content, label: false, placeholder: "Entre ton message" %>
     <% end %>
