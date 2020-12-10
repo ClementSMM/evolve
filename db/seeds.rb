@@ -411,6 +411,17 @@ up.last_lesson_id = lesson5.id
 up.last_step_id = step1.id
 up.save
 
+up = UsersProgram.where(user: marg, program: prog1).first
+up.last_lesson_id = lesson5.id
+up.last_step_id = step1.id
+up.save
+
+up = UsersProgram.where(user: clem, program: prog1).first
+up.last_lesson_id = lesson5.id
+up.last_step_id = step1.id
+up.save
+
+
 puts "5 steps créés"
 
 lesson1 = Lesson.new(title: "Notions de bilan", description: "Comprendre ce qu'est l'actif et le passif du bilan et connaitre les principaux postes.", number: 1)
